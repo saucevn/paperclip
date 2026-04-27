@@ -5,6 +5,7 @@
  * @see PLUGIN_SPEC.md §9 — Plugin Marketplace / Manager
  */
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import type { PluginRecord } from "@paperclipai/shared";
 import { Link } from "@/lib/router";
@@ -63,6 +64,7 @@ function getPluginErrorSummary(plugin: PluginRecord): string {
 export function PluginManager() {
   const { selectedCompany } = useCompany();
   const { setBreadcrumbs } = useBreadcrumbs();
+  const { t } = useTranslation("navigation");
   const queryClient = useQueryClient();
   const { pushToast } = useToastActions();
 
@@ -75,8 +77,8 @@ export function PluginManager() {
   useEffect(() => {
     setBreadcrumbs([
       { label: selectedCompany?.name ?? "Company", href: "/dashboard" },
-      { label: "Settings", href: "/instance/settings/heartbeats" },
-      { label: "Plugins" },
+      { label: t("breadcrumbs.settings"), href: "/instance/settings/heartbeats" },
+      { label: t("breadcrumbs.plugins") },
     ]);
   }, [selectedCompany?.name, setBreadcrumbs]);
 

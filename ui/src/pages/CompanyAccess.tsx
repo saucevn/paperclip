@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   HUMAN_COMPANY_MEMBERSHIP_ROLE_LABELS,
@@ -60,6 +61,7 @@ function getImplicitGrantKeys(role: CompanyMember["membershipRole"]) {
 export function CompanyAccess() {
   const { selectedCompany, selectedCompanyId } = useCompany();
   const { setBreadcrumbs } = useBreadcrumbs();
+  const { t } = useTranslation("navigation");
   const { pushToast } = useToast();
   const queryClient = useQueryClient();
   const [editingMemberId, setEditingMemberId] = useState<string | null>(null);
@@ -72,8 +74,8 @@ export function CompanyAccess() {
   useEffect(() => {
     setBreadcrumbs([
       { label: selectedCompany?.name ?? "Company", href: "/dashboard" },
-      { label: "Settings", href: "/company/settings" },
-      { label: "Access" },
+      { label: t("breadcrumbs.settings"), href: "/company/settings" },
+      { label: t("breadcrumbs.access") },
     ]);
   }, [selectedCompany?.name, setBreadcrumbs]);
 

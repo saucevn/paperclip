@@ -1,0 +1,53 @@
+{
+  "title": "Dashboard",
+  "getStarted": "Get Started",
+  "noCompany": "Create or select a company to view the dashboard.",
+  "welcome": "Welcome to Paperclip. Set up your first company and agent to get started.",
+  "createFirstCompany": "Create your first company",
+  "openOnboarding": "Start Onboarding",
+  "metrics": {
+    "agentsEnabled": "Agents Enabled",
+    "tasksInProgress": "Tasks In Progress",
+    "monthSpend": "Month Spend",
+    "pendingApprovals": "Pending Approvals",
+    "unlimitedBudget": "Unlimited budget",
+    "awaitingReview": "Awaiting board review",
+    "budgetOverrides_one": "{{count}} budget override awaiting board review",
+    "budgetOverrides_other": "{{count}} budget overrides awaiting board review"
+  },
+  "agentStatus": {
+    "running_one": "{{count}} running",
+    "running_other": "{{count}} running",
+    "paused_one": "{{count}} paused",
+    "paused_other": "{{count}} paused",
+    "errors_one": "{{count}} error",
+    "errors_other": "{{count}} errors",
+    "open_one": "{{count}} open",
+    "open_other": "{{count}} open",
+    "blocked_one": "{{count}} blocked",
+    "blocked_other": "{{count}} blocked"
+  },
+  "noAgents": {
+    "message": "You have no agents.",
+    "createLink": "Create one here"
+  },
+  "budgetIncident": {
+    "title_one": "{{count}} active budget incident",
+    "title_other": "{{count}} active budget incidents",
+    "detail": "{{pausedAgents}} agents paused · {{pausedProjects}} projects paused · {{pendingApprovals}} pending budget approvals",
+    "openBudgets": "Open budgets"
+  },
+  "recentActivity": "Recent Activity",
+  "recentTasks": "Recent Tasks",
+  "noTasks": "No tasks yet.",
+  "noActivity": "No activity yet.",
+  "charts": {
+    "runActivity": "Run Activity",
+    "issuesByPriority": "Issues by Priority",
+    "issuesByStatus": "Issues by Status",
+    "successRate": "Success Rate",
+    "last14Days": "Last 14 days"
+  },
+  "activeAgents": "Active Agents",
+  "noActiveAgents": "No active agents."
+}

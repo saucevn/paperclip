@@ -1,0 +1,32 @@
+{
+  "title": "Projects",
+  "newProject": "New Project",
+  "noProjects": "No projects found.",
+  "addProject": "Add Project",
+  "tabs": {
+    "overview": "Overview",
+    "issues": "Issues",
+    "activity": "Activity",
+    "settings": "Settings"
+  },
+  "detail": {
+    "description": "Description",
+    "addDescription": "Add a description...",
+    "status": "Status",
+    "lead": "Lead",
+    "members": "Members",
+    "startDate": "Start date",
+    "targetDate": "Target date",
+    "noLead": "No lead",
+    "noMembers": "No members",
+    "noTargetDate": "No target date"
+  },
+  "status": {
+    "active": "Active",
+    "paused": "Paused",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "noIssues": "No issues in this project.",
+  "archivedAt": "Archived {{date}}"
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Issues",
+  "newIssue": "New Issue",
+  "noIssues": "No issues found.",
+  "filters": {
+    "all": "All",
+    "active": "Active",
+    "backlog": "Backlog",
+    "done": "Done",
+    "recent": "Recent",
+    "assigned": "Assigned to me"
+  },
+  "columns": {
+    "title": "Title",
+    "status": "Status",
+    "priority": "Priority",
+    "assignee": "Assignee",
+    "project": "Project",
+    "labels": "Labels",
+    "createdAt": "Created",
+    "updatedAt": "Updated",
+    "identifier": "ID"
+  },
+  "status": {
+    "open": "Open",
+    "inProgress": "In Progress",
+    "inReview": "In Review",
+    "done": "Done",
+    "blocked": "Blocked",
+    "cancelled": "Cancelled",
+    "backlog": "Backlog"
+  },
+  "priority": {
+    "urgent": "Urgent",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "none": "No priority"
+  },
+  "detail": {
+    "description": "Description",
+    "addDescription": "Add a description...",
+    "comments": "Comments",
+    "addComment": "Leave a comment...",
+    "activity": "Activity",
+    "subIssues": "Sub-issues",
+    "blockedBy": "Blocked by",
+    "blocks": "Blocks",
+    "assignee": "Assignee",
+    "unassigned": "Unassigned",
+    "priority": "Priority",
+    "status": "Status",
+    "labels": "Labels",
+    "project": "Project",
+    "createdBy": "Created by",
+    "createdAt": "Created",
+    "updatedAt": "Updated",
+    "noLabels": "No labels",
+    "noProject": "No project"
+  },
+  "blockedNotice": {
+    "single": "Work on this issue is blocked by the linked issue until it is complete.",
+    "multiple": "Work on this issue is blocked by the linked issues until they are complete."
+  },
+  "draft": {
+    "count_one": "{{count}} draft issue",
+    "count_other": "{{count}} draft issues",
+    "allSelected_one": "All {{count}} draft issue selected",
+    "allSelected_other": "All {{count}} draft issues selected",
+    "someSelected": "{{selected}} of {{total}} draft issues selected"
+  },
+  "newIssueDialog": {
+    "title": "Create Issue",
+    "titlePlaceholder": "Issue title",
+    "descriptionPlaceholder": "Add description...",
+    "create": "Create Issue",
+    "createAnother": "Create & add another"
+  },
+  "staleRun": "Stale run",
+  "noLivenessData": "No liveness data",
+  "activeBlocker": "Active blocker"
+}

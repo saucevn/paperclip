@@ -1,0 +1,42 @@
+{
+  "title": "Chi phí",
+  "tabs": {
+    "overview": "Tổng quan",
+    "events": "Sự kiện tài chính",
+    "incidents": "Sự cố đang diễn ra"
+  },
+  "metrics": {
+    "debits": "Khoản ghi nợ",
+    "credits": "Khoản ghi có",
+    "net": "Thuần",
+    "estimated": "Ước tính",
+    "inferenceSpend": "Chi phí suy luận",
+    "budget": "Ngân sách",
+    "financeNet": "Tài chính thuần",
+    "allTimeTokens": "Tổng token từ trước đến nay"
+  },
+  "budgetStatus": {
+    "healthy": "Bình thường",
+    "warning": "Cảnh báo",
+    "hardStop": "Dừng cứng",
+    "paused": "Đã tạm dừng",
+    "underBudget": "Trong ngân sách ({{percent}}%)",
+    "warningThreshold": "Cảnh báo ({{percent}}%)",
+    "overBudget": "Vượt ngân sách ({{percent}}%)",
+    "unlimited": "Ngân sách không giới hạn"
+  },
+  "incidents": {
+    "active_one": "{{count}} sự cố đang hoạt động",
+    "active_other": "{{count}} sự cố đang hoạt động",
+    "pausedAgents_one": "{{count}} agent đã tạm dừng",
+    "pausedAgents_other": "{{count}} agent đã tạm dừng",
+    "pausedProjects_one": "{{count}} dự án đã tạm dừng",
+    "pausedProjects_other": "{{count}} dự án đã tạm dừng"
+  },
+  "updateBudget": "Cập nhật ngân sách",
+  "setBudget": "Đặt ngân sách",
+  "saving": "Đang lưu...",
+  "accountLevelCharges": "Phí cấp độ tài khoản",
+  "noEvents": "Không có sự kiện tài chính nào.",
+  "noIncidents": "Không có sự cố đang diễn ra."
+}

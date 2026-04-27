@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "title": "Hồ sơ",
+    "description": "Kiểm soát cách tài khoản của bạn hiển thị trên sidebar và các giao diện board khác.",
+    "displayName": "Tên hiển thị",
+    "displayNameHint": "Hiển thị trong footer tài khoản sidebar và giao diện tác giả bình luận.",
+    "email": "Email",
+    "emailHint": "Email được quản lý bởi phiên xác thực của bạn và chỉ có thể đọc tại đây.",
+    "uploadPhoto": "Tải ảnh lên",
+    "changePhoto": "Thay đổi ảnh",
+    "remove": "Xóa",
+    "saveProfile": "Lưu hồ sơ",
+    "saving": "Đang lưu...",
+    "loading": "Đang tải hồ sơ...",
+    "loadError": "Không thể tải hồ sơ.",
+    "saveError": "Không thể cập nhật hồ sơ.",
+    "uploadError": "Không thể tải ảnh đại diện lên.",
+    "removeError": "Không thể xóa ảnh đại diện.",
+    "uploadHint": "Được lưu trữ trong bộ nhớ file Paperclip cho {{company}}.",
+    "uploadHintNoCompany": "Chọn một công ty để tải ảnh đại diện lên bộ nhớ Paperclip.",
+    "clickToUpload": "Nhấp vào ảnh đại diện để tải lên hình ảnh mới.",
+    "language": "Ngôn ngữ",
+    "languageDescription": "Chọn ngôn ngữ hiển thị ưa thích của bạn.",
+    "namePlaceholder": "Board",
+    "noEmail": "Không có email"
+  },
+  "instance": {
+    "title": "Cài đặt hệ thống",
+    "general": "Chung",
+    "access": "Quyền truy cập",
+    "plugins": "Plugin",
+    "adapters": "Adapter",
+    "experimental": "Thử nghiệm",
+    "heartbeat": "Heartbeat"
+  },
+  "company": {
+    "title": "Cài đặt công ty",
+    "name": "Tên công ty",
+    "description": "Mô tả",
+    "logo": "Logo",
+    "brandColor": "Màu thương hiệu",
+    "requireBoardApproval": "Yêu cầu board phê duyệt cho nhân viên mới",
+    "save": "Lưu thay đổi",
+    "saving": "Đang lưu...",
+    "saveSuccess": "Đã lưu cài đặt công ty.",
+    "saveError": "Không thể lưu cài đặt công ty."
+  },
+  "access": {
+    "title": "Quyền truy cập",
+    "users": "Người dùng",
+    "viewers": "Người xem",
+    "operators": "Người vận hành",
+    "admins": "Quản trị viên",
+    "owners": "Chủ sở hữu",
+    "invite": "Mời",
+    "inviteUser": "Mời người dùng",
+    "removeUser": "Xóa người dùng",
+    "canCreateAgents": "Có thể tạo agent, mời người dùng, phân công nhiệm vụ và phê duyệt yêu cầu tham gia",
+    "canAssignTasks": "Có thể phân công nhiệm vụ",
+    "canViewWork": "Có thể xem công việc của công ty"
+  },
+  "workspace": {
+    "localGitCheckout": "Git checkout cục bộ",
+    "remoteGitRepo": "Kho Git từ xa",
+    "localNonGitPath": "Đường dẫn cục bộ không có Git",
+    "localNonGitDesc": "Một thư mục cục bộ không có ngữ nghĩa git",
+    "remoteGitDesc": "URL kho với ref tùy chọn và checkout cục bộ",
+    "externalRef": "Không gian làm việc được lưu trữ theo dõi bởi tham chiếu bên ngoài",
+    "name": "Tên",
+    "driver": "Driver",
+    "host": "Host",
+    "port": "Cổng",
+    "username": "Tên đăng nhập",
+    "remotePath": "Đường dẫn không gian làm việc từ xa",
+    "privateKey": "Khóa riêng",
+    "knownHosts": "Known hosts",
+    "strictHostKey": "Kiểm tra khóa host nghiêm ngặt"
+  },
+  "export": {
+    "title": "Xuất dữ liệu",
+    "exportData": "Xuất dữ liệu",
+    "exporting": "Đang xuất..."
+  },
+  "import": {
+    "title": "Nhập dữ liệu",
+    "githubUrl": "URL GitHub",
+    "target": "Mục tiêu",
+    "newCompanyName": "Tên công ty mới",
+    "collisionStrategy": "Chiến lược xử lý trùng lặp"
+  },
+  "plugins": {
+    "title": "Plugin",
+    "install": "Cài đặt plugin",
+    "remove": "Gỡ bỏ plugin",
+    "reinstall": "Cài đặt lại plugin",
+    "noPlugins": "Chưa có plugin nào được cài đặt.",
+    "installed": "Adapter đã được cài đặt",
+    "removed": "Adapter đã được gỡ bỏ",
+    "reinstalled": "Adapter đã được cài đặt lại"
+  },
+  "adapters": {
+    "title": "Adapter",
+    "noAdapters": "Chưa có adapter nào được cấu hình."
+  },
+  "experimental": {
+    "title": "Cài đặt thử nghiệm",
+    "featureFlags": "Tính năng thử nghiệm",
+    "enableFeature": "Bật {{feature}}"
+  }
+}

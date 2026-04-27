@@ -1,0 +1,25 @@
+{
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "companyNotFound": "Không tìm thấy công ty",
+    "description": "Đường dẫn này không tồn tại.",
+    "companyDescription": "Không có công ty nào khớp với tiền tố \"{{prefix}}\".",
+    "requestedPath": "Đường dẫn yêu cầu",
+    "openDashboard": "Mở tổng quan",
+    "goHome": "Về trang chủ"
+  },
+  "loading": "Đang tải...",
+  "generic": "Đã có lỗi xảy ra.",
+  "retry": "Thử lại",
+  "networkError": "Lỗi mạng. Vui lòng kiểm tra kết nối của bạn.",
+  "permissionDenied": "Bạn không có quyền thực hiện thao tác này.",
+  "actions": {
+    "acceptFailed": "Chấp nhận thất bại",
+    "archiveFailed": "Lưu trữ thất bại",
+    "actionFailed": "Thao tác thất bại",
+    "cancelFailed": "Hủy thất bại",
+    "approveFailed": "Phê duyệt thất bại",
+    "approvalApproved": "Đã phê duyệt",
+    "approvalRejected": "Đã từ chối"
+  }
+}

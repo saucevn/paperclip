@@ -1,0 +1,33 @@
+{
+  "title": "Phê duyệt",
+  "noApprovals": "Không có phê duyệt nào đang chờ.",
+  "pendingCount_one": "{{count}} phê duyệt đang chờ",
+  "pendingCount_other": "{{count}} phê duyệt đang chờ",
+  "tabs": {
+    "pending": "Đang chờ",
+    "approved": "Đã phê duyệt",
+    "rejected": "Đã từ chối",
+    "all": "Tất cả"
+  },
+  "status": {
+    "pending": "Đang chờ",
+    "approved": "Đã phê duyệt",
+    "rejected": "Đã từ chối",
+    "accepted": "Đã chấp nhận",
+    "declined": "Đã từ chối",
+    "awaitingBoardReview": "Đang chờ board xét duyệt"
+  },
+  "actions": {
+    "approve": "Phê duyệt",
+    "reject": "Từ chối",
+    "accept": "Chấp nhận",
+    "decline": "Từ chối"
+  },
+  "budgetOverride": "Vượt ngân sách",
+  "joinRequest": "Yêu cầu tham gia",
+  "approvalFor": "Phê duyệt cho {{name}}",
+  "requestedBy": "Yêu cầu bởi {{name}}",
+  "requestedAt": "Yêu cầu {{time}}",
+  "companyAdminRequired": "Quản trị viên công ty phải phê duyệt yêu cầu tham gia của bạn",
+  "visitSettings": "Yêu cầu họ truy cập Cài đặt Công ty → Quyền truy cập"
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Hộp thư",
+  "noMessages": "Hộp thư của bạn trống.",
+  "markAsRead": "Đánh dấu đã đọc",
+  "markAsUnread": "Đánh dấu chưa đọc",
+  "markAllRead": "Đánh dấu tất cả đã đọc",
+  "markAllReadConfirm": "Đánh dấu tất cả đã đọc?",
+  "markAllReadDescription_one": "Sẽ đánh dấu {{count}} mục chưa đọc là đã đọc.",
+  "markAllReadDescription_other": "Sẽ đánh dấu {{count}} mục chưa đọc là đã đọc.",
+  "markingRead": "Đang đánh dấu…",
+  "searchPlaceholder": "Tìm trong hộp thư…",
+  "categoryPlaceholder": "Danh mục",
+  "categories": {
+    "everything": "Tất cả danh mục",
+    "myRecentIssues": "Issues gần đây của tôi"
+  },
+  "viewFilters": {
+    "mine": "Của tôi",
+    "recent": "Gần đây",
+    "unread": "Chưa đọc",
+    "all": "Tất cả"
+  },
+  "group": "Nhóm",
+  "groupOptions": {
+    "none": "Không nhóm",
+    "type": "Loại",
+    "workspace": "Không gian làm việc"
+  },
+  "nestingEnable": "Bật phân cấp cha-con",
+  "nestingDisable": "Tắt phân cấp cha-con",
+  "chooseColumns": "Chọn cột hiển thị trong hộp thư",
+  "failedRun": "Lần chạy thất bại",
+  "retry": "Thử lại",
+  "retrying": "Đang thử lại…",
+  "filters": {
+    "all": "Tất cả",
+    "unread": "Chưa đọc",
+    "mentions": "Đề cập",
+    "approvals": "Phê duyệt"
+  },
+  "types": {
+    "comment": "Bình luận",
+    "mention": "Đề cập",
+    "approval": "Phê duyệt",
+    "assignment": "Phân công",
+    "statusChange": "Thay đổi trạng thái"
+  },
+  "failedRuns_one": "{{count}} lần chạy thất bại",
+  "failedRuns_other": "{{count}} lần chạy thất bại"
+}
