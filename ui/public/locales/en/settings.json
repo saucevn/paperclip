@@ -106,5 +106,14 @@
     "title": "Experimental Settings",
     "featureFlags": "Feature flags",
     "enableFeature": "Enable {{feature}}"
+  },
+  "deploymentMode": {
+    "localTrusted": "Local trusted",
+    "authenticated": "Authenticated {{exposure}}"
+  },
+  "companyTabs": {
+    "general": "General",
+    "access": "Access",
+    "invites": "Invites"
   }
 }

@@ -33,6 +33,11 @@
     "pausedProjects_one": "{{count}} dự án đã tạm dừng",
     "pausedProjects_other": "{{count}} dự án đã tạm dừng"
   },
+  "budgetSidebarMarker": {
+    "healthy": "Ngân sách ổn định",
+    "warning": "Cảnh báo ngân sách",
+    "critical": "Tạm dừng do ngân sách"
+  },
   "updateBudget": "Cập nhật ngân sách",
   "setBudget": "Đặt ngân sách",
   "saving": "Đang lưu...",
