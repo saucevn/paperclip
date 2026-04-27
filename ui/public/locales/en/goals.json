@@ -1,0 +1,16 @@
+{
+  "title": "Goals",
+  "newGoal": "New Goal",
+  "addGoal": "Add Goal",
+  "noGoals": "No goals yet.",
+  "detail": {
+    "showProperties": "Show properties",
+    "addDescription": "Add a description...",
+    "noSubGoals": "No sub-goals.",
+    "noLinkedProjects": "No linked projects.",
+    "subGoals": "Sub-goals",
+    "linkedProjects": "Linked projects",
+    "addSubGoal": "Sub Goal",
+    "tabProjects": "Projects"
+  }
+}

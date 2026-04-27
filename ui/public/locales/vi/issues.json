@@ -1,0 +1,82 @@
+{
+  "title": "Issues",
+  "newIssue": "Tạo Issue mới",
+  "noIssues": "Không tìm thấy issue nào.",
+  "filters": {
+    "all": "Tất cả",
+    "active": "Đang hoạt động",
+    "backlog": "Backlog",
+    "done": "Hoàn thành",
+    "recent": "Gần đây",
+    "assigned": "Được giao cho tôi"
+  },
+  "columns": {
+    "title": "Tiêu đề",
+    "status": "Trạng thái",
+    "priority": "Mức độ ưu tiên",
+    "assignee": "Người được giao",
+    "project": "Dự án",
+    "labels": "Nhãn",
+    "createdAt": "Ngày tạo",
+    "updatedAt": "Ngày cập nhật",
+    "identifier": "ID"
+  },
+  "status": {
+    "open": "Đang mở",
+    "inProgress": "Đang thực hiện",
+    "inReview": "Đang xét duyệt",
+    "done": "Hoàn thành",
+    "blocked": "Bị chặn",
+    "cancelled": "Đã hủy",
+    "backlog": "Backlog"
+  },
+  "priority": {
+    "urgent": "Khẩn cấp",
+    "high": "Cao",
+    "medium": "Trung bình",
+    "low": "Thấp",
+    "none": "Không có mức độ ưu tiên"
+  },
+  "detail": {
+    "description": "Mô tả",
+    "addDescription": "Thêm mô tả...",
+    "comments": "Bình luận",
+    "addComment": "Để lại bình luận...",
+    "activity": "Hoạt động",
+    "subIssues": "Issue con",
+    "blockedBy": "Bị chặn bởi",
+    "blocks": "Chặn",
+    "assignee": "Người được giao",
+    "unassigned": "Chưa được giao",
+    "priority": "Mức độ ưu tiên",
+    "status": "Trạng thái",
+    "labels": "Nhãn",
+    "project": "Dự án",
+    "createdBy": "Tạo bởi",
+    "createdAt": "Ngày tạo",
+    "updatedAt": "Ngày cập nhật",
+    "noLabels": "Không có nhãn",
+    "noProject": "Không có dự án"
+  },
+  "blockedNotice": {
+    "single": "Công việc trên issue này bị chặn bởi issue được liên kết cho đến khi hoàn thành.",
+    "multiple": "Công việc trên issue này bị chặn bởi các issue được liên kết cho đến khi hoàn thành."
+  },
+  "draft": {
+    "count_one": "{{count}} issue nháp",
+    "count_other": "{{count}} issue nháp",
+    "allSelected_one": "Đã chọn tất cả {{count}} issue nháp",
+    "allSelected_other": "Đã chọn tất cả {{count}} issue nháp",
+    "someSelected": "Đã chọn {{selected}} trong số {{total}} issue nháp"
+  },
+  "newIssueDialog": {
+    "title": "Tạo Issue",
+    "titlePlaceholder": "Tiêu đề issue",
+    "descriptionPlaceholder": "Thêm mô tả...",
+    "create": "Tạo Issue",
+    "createAnother": "Tạo và thêm mục khác"
+  },
+  "staleRun": "Lần chạy cũ",
+  "noLivenessData": "Không có dữ liệu trạng thái",
+  "activeBlocker": "Đang bị chặn"
+}

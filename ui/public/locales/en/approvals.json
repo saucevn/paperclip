@@ -1,0 +1,33 @@
+{
+  "title": "Approvals",
+  "noApprovals": "No pending approvals.",
+  "pendingCount_one": "{{count}} pending approval",
+  "pendingCount_other": "{{count}} pending approvals",
+  "tabs": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "all": "All"
+  },
+  "status": {
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "awaitingBoardReview": "Awaiting board review"
+  },
+  "actions": {
+    "approve": "Approve",
+    "reject": "Reject",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "budgetOverride": "Budget override",
+  "joinRequest": "Join request",
+  "approvalFor": "Approval for {{name}}",
+  "requestedBy": "Requested by {{name}}",
+  "requestedAt": "Requested {{time}}",
+  "companyAdminRequired": "A company admin must approve your request to join",
+  "visitSettings": "Ask them to visit Company Settings → Access"
+}

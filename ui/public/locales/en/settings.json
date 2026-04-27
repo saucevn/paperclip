@@ -1,0 +1,110 @@
+{
+  "profile": {
+    "title": "Profile",
+    "description": "Control how your account appears in the sidebar and other board surfaces.",
+    "displayName": "Display name",
+    "displayNameHint": "Shown in the sidebar account footer and comment author surfaces.",
+    "email": "Email",
+    "emailHint": "Email is managed by your auth session and is read-only here.",
+    "uploadPhoto": "Upload photo",
+    "changePhoto": "Change photo",
+    "remove": "Remove",
+    "saveProfile": "Save profile",
+    "saving": "Saving...",
+    "loading": "Loading profile...",
+    "loadError": "Failed to load profile.",
+    "saveError": "Failed to update profile.",
+    "uploadError": "Failed to upload avatar.",
+    "removeError": "Failed to remove avatar.",
+    "uploadHint": "Stored in Paperclip file storage for {{company}}.",
+    "uploadHintNoCompany": "Select a company to upload an avatar into Paperclip storage.",
+    "clickToUpload": "Click the avatar to upload a new image.",
+    "language": "Language",
+    "languageDescription": "Choose your preferred display language.",
+    "namePlaceholder": "Board",
+    "noEmail": "No email"
+  },
+  "instance": {
+    "title": "Instance Settings",
+    "general": "General",
+    "access": "Access",
+    "plugins": "Plugins",
+    "adapters": "Adapters",
+    "experimental": "Experimental",
+    "heartbeat": "Heartbeat"
+  },
+  "company": {
+    "title": "Company Settings",
+    "name": "Company name",
+    "description": "Description",
+    "logo": "Logo",
+    "brandColor": "Brand color",
+    "requireBoardApproval": "Require board approval for new hires",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "saveSuccess": "Company settings saved.",
+    "saveError": "Failed to save company settings."
+  },
+  "access": {
+    "title": "Access",
+    "users": "Users",
+    "viewers": "Viewers",
+    "operators": "Operators",
+    "admins": "Admins",
+    "owners": "Owners",
+    "invite": "Invite",
+    "inviteUser": "Invite user",
+    "removeUser": "Remove user",
+    "canCreateAgents": "Can create agents, invite users, assign tasks, and approve join requests",
+    "canAssignTasks": "Can assign tasks",
+    "canViewWork": "Can view company work"
+  },
+  "workspace": {
+    "localGitCheckout": "Local git checkout",
+    "remoteGitRepo": "Remote git repo",
+    "localNonGitPath": "Local non-git path",
+    "localNonGitDesc": "A local folder without git semantics",
+    "remoteGitDesc": "A repo URL with optional refs and local checkout",
+    "externalRef": "A hosted workspace tracked by external reference",
+    "name": "Name",
+    "driver": "Driver",
+    "host": "Host",
+    "port": "Port",
+    "username": "Username",
+    "remotePath": "Remote workspace path",
+    "privateKey": "Private key",
+    "knownHosts": "Known hosts",
+    "strictHostKey": "Strict host key checking"
+  },
+  "export": {
+    "title": "Export",
+    "exportData": "Export data",
+    "exporting": "Exporting..."
+  },
+  "import": {
+    "title": "Import",
+    "githubUrl": "GitHub URL",
+    "target": "Target",
+    "newCompanyName": "New company name",
+    "collisionStrategy": "Collision strategy"
+  },
+  "plugins": {
+    "title": "Plugins",
+    "install": "Install plugin",
+    "remove": "Remove plugin",
+    "reinstall": "Reinstall plugin",
+    "noPlugins": "No plugins installed.",
+    "installed": "Adapter installed",
+    "removed": "Adapter removed",
+    "reinstalled": "Adapter reinstalled"
+  },
+  "adapters": {
+    "title": "Adapters",
+    "noAdapters": "No adapters configured."
+  },
+  "experimental": {
+    "title": "Experimental Settings",
+    "featureFlags": "Feature flags",
+    "enableFeature": "Enable {{feature}}"
+  }
+}

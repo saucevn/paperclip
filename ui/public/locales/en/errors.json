@@ -1,0 +1,25 @@
+{
+  "notFound": {
+    "title": "Page not found",
+    "companyNotFound": "Company not found",
+    "description": "This route does not exist.",
+    "companyDescription": "No company matches prefix \"{{prefix}}\".",
+    "requestedPath": "Requested path",
+    "openDashboard": "Open dashboard",
+    "goHome": "Go home"
+  },
+  "loading": "Loading...",
+  "generic": "Something went wrong.",
+  "retry": "Try again",
+  "networkError": "Network error. Please check your connection.",
+  "permissionDenied": "You don't have permission to do this.",
+  "actions": {
+    "acceptFailed": "Accept failed",
+    "archiveFailed": "Archive failed",
+    "actionFailed": "Action failed",
+    "cancelFailed": "Cancel failed",
+    "approveFailed": "Approval failed",
+    "approvalApproved": "Approval approved",
+    "approvalRejected": "Approval rejected"
+  }
+}

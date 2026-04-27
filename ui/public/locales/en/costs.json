@@ -1,0 +1,42 @@
+{
+  "title": "Costs",
+  "tabs": {
+    "overview": "Overview",
+    "events": "Finance events",
+    "incidents": "Active incidents"
+  },
+  "metrics": {
+    "debits": "Debits",
+    "credits": "Credits",
+    "net": "Net",
+    "estimated": "Estimated",
+    "inferenceSpend": "Inference spend",
+    "budget": "Budget",
+    "financeNet": "Finance net",
+    "allTimeTokens": "All-time tokens"
+  },
+  "budgetStatus": {
+    "healthy": "Healthy",
+    "warning": "Warning",
+    "hardStop": "Hard stop",
+    "paused": "Paused",
+    "underBudget": "Under budget ({{percent}}%)",
+    "warningThreshold": "Warning ({{percent}}%)",
+    "overBudget": "Over budget ({{percent}}%)",
+    "unlimited": "Unlimited budget"
+  },
+  "incidents": {
+    "active_one": "{{count}} active incident",
+    "active_other": "{{count}} active incidents",
+    "pausedAgents_one": "{{count}} agent paused",
+    "pausedAgents_other": "{{count}} agents paused",
+    "pausedProjects_one": "{{count}} project paused",
+    "pausedProjects_other": "{{count}} projects paused"
+  },
+  "updateBudget": "Update budget",
+  "setBudget": "Set budget",
+  "saving": "Saving...",
+  "accountLevelCharges": "Account-level charges",
+  "noEvents": "No finance events.",
+  "noIncidents": "No active incidents."
+}

@@ -1,0 +1,90 @@
+{
+  "title": "Quy trình",
+  "newRoutine": "Tạo quy trình mới",
+  "noRoutines": "Chưa có quy trình nào. Dùng Tạo quy trình để định nghĩa quy trình lặp lại đầu tiên.",
+  "noRuns": "Chưa có lần chạy nào.",
+  "recentRuns": "Lần chạy gần đây",
+  "titlePlaceholder": "Tên quy trình",
+  "group": {
+    "project": "Dự án",
+    "assignee": "Agent",
+    "none": "Không nhóm"
+  },
+  "rowTabs": {
+    "routines": "Quy trình",
+    "runs": "Lần chạy gần đây"
+  },
+  "state": {
+    "archived": "Đã lưu trữ",
+    "draft": "Bản nháp",
+    "on": "Bật",
+    "off": "Tắt"
+  },
+  "actions": {
+    "edit": "Sửa",
+    "run": "Chạy ngay",
+    "running": "Đang chạy...",
+    "pause": "Tạm dừng",
+    "enable": "Kích hoạt",
+    "archive": "Lưu trữ",
+    "restore": "Khôi phục"
+  },
+  "noProject": "Không có dự án",
+  "unknownProject": "Dự án không xác định",
+  "unassigned": "Chưa phân công",
+  "unknownAgent": "Agent không xác định",
+  "noDefaultAgent": "Chưa có agent mặc định",
+  "assigneePlaceholder": "Người nhận",
+  "noAssignee": "Không có người nhận",
+  "noProjectOption": "Không có dự án",
+  "created": {
+    "title": "Đã tạo quy trình",
+    "withTrigger": "Thêm kích hoạt đầu tiên để biến thành quy trình trực tiếp.",
+    "noAgent": "Đã lưu bản nháp. Thêm agent mặc định trước khi bật tự động hóa."
+  },
+  "updateFailed": {
+    "title": "Cập nhật quy trình thất bại",
+    "body": "Paperclip không thể cập nhật quy trình."
+  },
+  "runFailed": {
+    "title": "Chạy quy trình thất bại",
+    "body": "Paperclip không thể bắt đầu lần chạy quy trình."
+  },
+  "agentRequired": {
+    "title": "Cần agent mặc định",
+    "body": "Đặt agent mặc định trước khi bật tự động hóa quy trình."
+  },
+  "tabs": {
+    "overview": "Tổng quan",
+    "runs": "Lần chạy",
+    "settings": "Cài đặt"
+  },
+  "schedule": {
+    "label": "Lịch trình",
+    "everyMinute": "Mỗi phút",
+    "everyHour": "Mỗi giờ",
+    "everyDay": "Mỗi ngày",
+    "everyWeek": "Hàng tuần",
+    "everyMonth": "Hàng tháng",
+    "custom": "Tùy chỉnh (cron)",
+    "catchUpMissed": "Bù đắp các chu kỳ bị bỏ lỡ",
+    "skipMissed": "Bỏ qua các chu kỳ bị lỡ khi scheduler hoặc quy trình tạm dừng.",
+    "enqueueMissedWithCap": "Bù đắp các chu kỳ bị lỡ theo lô có giới hạn sau khi khôi phục."
+  },
+  "trigger": {
+    "label": "Kích hoạt",
+    "addTrigger": "Thêm kích hoạt",
+    "gitPush": "Git push",
+    "baseRef": "Ref cơ sở",
+    "branchName": "Tên nhánh"
+  },
+  "status": {
+    "active": "Đang hoạt động",
+    "paused": "Đã tạm dừng",
+    "completed": "Đã hoàn thành",
+    "failed": "Thất bại"
+  },
+  "lastRun": "Lần chạy cuối",
+  "nextRun": "Lần chạy tiếp theo",
+  "for": "Dành cho"
+}

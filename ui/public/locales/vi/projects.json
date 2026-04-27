@@ -1,0 +1,32 @@
+{
+  "title": "Dự án",
+  "newProject": "Tạo Dự án mới",
+  "noProjects": "Không tìm thấy dự án nào.",
+  "addProject": "Thêm Dự án",
+  "tabs": {
+    "overview": "Tổng quan",
+    "issues": "Issues",
+    "activity": "Hoạt động",
+    "settings": "Cài đặt"
+  },
+  "detail": {
+    "description": "Mô tả",
+    "addDescription": "Thêm mô tả...",
+    "status": "Trạng thái",
+    "lead": "Người phụ trách",
+    "members": "Thành viên",
+    "startDate": "Ngày bắt đầu",
+    "targetDate": "Ngày mục tiêu",
+    "noLead": "Chưa có người phụ trách",
+    "noMembers": "Chưa có thành viên",
+    "noTargetDate": "Chưa có ngày mục tiêu"
+  },
+  "status": {
+    "active": "Đang hoạt động",
+    "paused": "Đã tạm dừng",
+    "completed": "Đã hoàn thành",
+    "cancelled": "Đã hủy"
+  },
+  "noIssues": "Không có issue nào trong dự án này.",
+  "archivedAt": "Đã lưu trữ {{date}}"
+}

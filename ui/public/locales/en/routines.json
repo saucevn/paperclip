@@ -1,0 +1,90 @@
+{
+  "title": "Routines",
+  "newRoutine": "New Routine",
+  "noRoutines": "No routines yet. Use Create routine to define the first recurring workflow.",
+  "noRuns": "No runs yet.",
+  "recentRuns": "Recent Runs",
+  "titlePlaceholder": "Routine title",
+  "group": {
+    "project": "Project",
+    "assignee": "Agent",
+    "none": "None"
+  },
+  "rowTabs": {
+    "routines": "Routines",
+    "runs": "Recent Runs"
+  },
+  "state": {
+    "archived": "Archived",
+    "draft": "Draft",
+    "on": "On",
+    "off": "Off"
+  },
+  "actions": {
+    "edit": "Edit",
+    "run": "Run now",
+    "running": "Running...",
+    "pause": "Pause",
+    "enable": "Enable",
+    "archive": "Archive",
+    "restore": "Restore"
+  },
+  "noProject": "No project",
+  "unknownProject": "Unknown project",
+  "unassigned": "Unassigned",
+  "unknownAgent": "Unknown agent",
+  "noDefaultAgent": "No default agent",
+  "assigneePlaceholder": "Assignee",
+  "noAssignee": "No assignee",
+  "noProjectOption": "No project",
+  "created": {
+    "title": "Routine created",
+    "withTrigger": "Add the first trigger to turn it into a live workflow.",
+    "noAgent": "Draft saved. Add a default agent before enabling automation."
+  },
+  "updateFailed": {
+    "title": "Failed to update routine",
+    "body": "Paperclip could not update the routine."
+  },
+  "runFailed": {
+    "title": "Routine run failed",
+    "body": "Paperclip could not start the routine run."
+  },
+  "agentRequired": {
+    "title": "Default agent required",
+    "body": "Set a default agent before enabling routine automation."
+  },
+  "tabs": {
+    "overview": "Overview",
+    "runs": "Runs",
+    "settings": "Settings"
+  },
+  "schedule": {
+    "label": "Schedule",
+    "everyMinute": "Every minute",
+    "everyHour": "Every hour",
+    "everyDay": "Every day",
+    "everyWeek": "Weekly",
+    "everyMonth": "Monthly",
+    "custom": "Custom (cron)",
+    "catchUpMissed": "Catch up missed schedule windows",
+    "skipMissed": "Ignore windows that were missed while the scheduler or routine was paused.",
+    "enqueueMissedWithCap": "Catch up missed schedule windows in capped batches after recovery."
+  },
+  "trigger": {
+    "label": "Trigger",
+    "addTrigger": "Add trigger",
+    "gitPush": "Git push",
+    "baseRef": "Base ref",
+    "branchName": "Branch name"
+  },
+  "status": {
+    "active": "Active",
+    "paused": "Paused",
+    "completed": "Completed",
+    "failed": "Failed"
+  },
+  "lastRun": "Last run",
+  "nextRun": "Next run",
+  "for": "For"
+}

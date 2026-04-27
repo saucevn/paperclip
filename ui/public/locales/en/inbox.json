@@ -1,0 +1,50 @@
+{
+  "title": "Inbox",
+  "noMessages": "Your inbox is empty.",
+  "markAsRead": "Mark as read",
+  "markAsUnread": "Mark as unread",
+  "markAllRead": "Mark all as read",
+  "markAllReadConfirm": "Mark all as read?",
+  "markAllReadDescription_one": "This will mark {{count}} unread item as read.",
+  "markAllReadDescription_other": "This will mark {{count}} unread items as read.",
+  "markingRead": "Marking…",
+  "searchPlaceholder": "Search inbox…",
+  "categoryPlaceholder": "Category",
+  "categories": {
+    "everything": "All categories",
+    "myRecentIssues": "My recent issues"
+  },
+  "viewFilters": {
+    "mine": "Mine",
+    "recent": "Recent",
+    "unread": "Unread",
+    "all": "All"
+  },
+  "group": "Group",
+  "groupOptions": {
+    "none": "None",
+    "type": "Type",
+    "workspace": "Workspace"
+  },
+  "nestingEnable": "Enable parent-child nesting",
+  "nestingDisable": "Disable parent-child nesting",
+  "chooseColumns": "Choose which inbox columns stay visible",
+  "failedRun": "Failed run",
+  "retry": "Retry",
+  "retrying": "Retrying…",
+  "filters": {
+    "all": "All",
+    "unread": "Unread",
+    "mentions": "Mentions",
+    "approvals": "Approvals"
+  },
+  "types": {
+    "comment": "Comment",
+    "mention": "Mention",
+    "approval": "Approval",
+    "assignment": "Assignment",
+    "statusChange": "Status change"
+  },
+  "failedRuns_one": "{{count}} failed run",
+  "failedRuns_other": "{{count}} failed runs"
+}

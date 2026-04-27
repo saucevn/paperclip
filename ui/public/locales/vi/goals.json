@@ -1,0 +1,16 @@
+{
+  "title": "Mục tiêu",
+  "newGoal": "Mục tiêu mới",
+  "addGoal": "Thêm mục tiêu",
+  "noGoals": "Chưa có mục tiêu nào.",
+  "detail": {
+    "showProperties": "Hiển thị thuộc tính",
+    "addDescription": "Thêm mô tả...",
+    "noSubGoals": "Chưa có mục tiêu con.",
+    "noLinkedProjects": "Chưa liên kết dự án nào.",
+    "subGoals": "Mục tiêu con",
+    "linkedProjects": "Dự án liên kết",
+    "addSubGoal": "Mục tiêu con",
+    "tabProjects": "Dự án"
+  }
+}

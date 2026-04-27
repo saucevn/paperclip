@@ -1,0 +1,55 @@
+{
+  "title": "Agents",
+  "newAgent": "New Agent",
+  "noAgents": "No agents found.",
+  "tabs": {
+    "all": "All",
+    "active": "Active",
+    "paused": "Paused",
+    "error": "Error"
+  },
+  "status": {
+    "active": "Active",
+    "paused": "Paused",
+    "error": "Error",
+    "running": "Running",
+    "idle": "Idle",
+    "terminated": "Terminated",
+    "live": "Live"
+  },
+  "detail": {
+    "overview": "Overview",
+    "runs": "Runs",
+    "issues": "Issues",
+    "config": "Config",
+    "activity": "Activity"
+  },
+  "config": {
+    "agentName": "Agent name",
+    "agentNamePlaceholder": "e.g. VP of Engineering",
+    "role": "Role",
+    "instructions": "Instructions",
+    "instructionsPlaceholder": "Describe what this agent can do...",
+    "systemPrompt": "System prompt",
+    "systemPromptPlaceholder": "You are agent {{ agent.name }}...",
+    "searchModels": "Search models...",
+    "advancedRunPolicy": "Advanced Run Policy",
+    "model": "Model",
+    "budget": "Budget",
+    "environment": "Environment",
+    "addEnvironment": "Add environment variable",
+    "envKeyPlaceholder": "KEY",
+    "envValuePlaceholder": "value"
+  },
+  "orgChart": "Org Chart",
+  "heartbeat": {
+    "blocked": "Agent heartbeats blocked by budget",
+    "joinRequest": "Agent join request"
+  },
+  "liveCount_one": "{{count}} live",
+  "liveCount_other": "{{count}} live",
+  "selectAgent": "Select an agent",
+  "noRunsYet": "No runs yet.",
+  "lastRun": "Last run",
+  "agentAttribution": "Agent attribution"
+}

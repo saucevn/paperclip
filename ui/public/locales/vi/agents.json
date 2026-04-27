@@ -1,0 +1,55 @@
+{
+  "title": "Agent",
+  "newAgent": "Tạo Agent mới",
+  "noAgents": "Không tìm thấy agent nào.",
+  "tabs": {
+    "all": "Tất cả",
+    "active": "Đang hoạt động",
+    "paused": "Đã tạm dừng",
+    "error": "Lỗi"
+  },
+  "status": {
+    "active": "Đang hoạt động",
+    "paused": "Đã tạm dừng",
+    "error": "Lỗi",
+    "running": "Đang chạy",
+    "idle": "Rảnh rỗi",
+    "terminated": "Đã kết thúc",
+    "live": "Trực tiếp"
+  },
+  "detail": {
+    "overview": "Tổng quan",
+    "runs": "Lần chạy",
+    "issues": "Issues",
+    "config": "Cấu hình",
+    "activity": "Hoạt động"
+  },
+  "config": {
+    "agentName": "Tên agent",
+    "agentNamePlaceholder": "ví dụ: Phó Giám đốc Kỹ thuật",
+    "role": "Vai trò",
+    "instructions": "Hướng dẫn",
+    "instructionsPlaceholder": "Mô tả những gì agent này có thể làm...",
+    "systemPrompt": "System prompt",
+    "systemPromptPlaceholder": "Bạn là agent {{ agent.name }}...",
+    "searchModels": "Tìm kiếm mô hình...",
+    "advancedRunPolicy": "Chính sách chạy nâng cao",
+    "model": "Mô hình",
+    "budget": "Ngân sách",
+    "environment": "Môi trường",
+    "addEnvironment": "Thêm biến môi trường",
+    "envKeyPlaceholder": "KHÓA",
+    "envValuePlaceholder": "giá trị"
+  },
+  "orgChart": "Sơ đồ tổ chức",
+  "heartbeat": {
+    "blocked": "Heartbeat agent bị chặn do ngân sách",
+    "joinRequest": "Yêu cầu tham gia của agent"
+  },
+  "liveCount_one": "{{count}} đang trực tiếp",
+  "liveCount_other": "{{count}} đang trực tiếp",
+  "selectAgent": "Chọn một agent",
+  "noRunsYet": "Chưa có lần chạy nào.",
+  "lastRun": "Lần chạy cuối",
+  "agentAttribution": "Thuộc về agent"
+}

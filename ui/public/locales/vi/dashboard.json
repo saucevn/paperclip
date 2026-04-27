@@ -1,0 +1,53 @@
+{
+  "title": "Tổng quan",
+  "getStarted": "Bắt đầu",
+  "noCompany": "Tạo hoặc chọn một công ty để xem tổng quan.",
+  "welcome": "Chào mừng đến với Paperclip. Hãy thiết lập công ty đầu tiên và agent để bắt đầu.",
+  "createFirstCompany": "Tạo công ty đầu tiên",
+  "openOnboarding": "Bắt đầu onboarding",
+  "metrics": {
+    "agentsEnabled": "Agent đang hoạt động",
+    "tasksInProgress": "Nhiệm vụ đang thực hiện",
+    "monthSpend": "Chi tiêu tháng này",
+    "pendingApprovals": "Chờ phê duyệt",
+    "unlimitedBudget": "Ngân sách không giới hạn",
+    "awaitingReview": "Đang chờ board xét duyệt",
+    "budgetOverrides_one": "{{count}} yêu cầu vượt ngân sách đang chờ board xét duyệt",
+    "budgetOverrides_other": "{{count}} yêu cầu vượt ngân sách đang chờ board xét duyệt"
+  },
+  "agentStatus": {
+    "running_one": "{{count}} đang chạy",
+    "running_other": "{{count}} đang chạy",
+    "paused_one": "{{count}} đã tạm dừng",
+    "paused_other": "{{count}} đã tạm dừng",
+    "errors_one": "{{count}} lỗi",
+    "errors_other": "{{count}} lỗi",
+    "open_one": "{{count}} đang mở",
+    "open_other": "{{count}} đang mở",
+    "blocked_one": "{{count}} bị chặn",
+    "blocked_other": "{{count}} bị chặn"
+  },
+  "noAgents": {
+    "message": "Bạn chưa có agent nào.",
+    "createLink": "Tạo một agent ngay tại đây"
+  },
+  "budgetIncident": {
+    "title_one": "{{count}} sự cố ngân sách đang hoạt động",
+    "title_other": "{{count}} sự cố ngân sách đang hoạt động",
+    "detail": "{{pausedAgents}} agent đã tạm dừng · {{pausedProjects}} dự án đã tạm dừng · {{pendingApprovals}} phê duyệt ngân sách đang chờ",
+    "openBudgets": "Xem ngân sách"
+  },
+  "recentActivity": "Hoạt động gần đây",
+  "recentTasks": "Nhiệm vụ gần đây",
+  "noTasks": "Chưa có nhiệm vụ nào.",
+  "noActivity": "Chưa có hoạt động nào.",
+  "charts": {
+    "runActivity": "Hoạt động chạy",
+    "issuesByPriority": "Issues theo mức độ ưu tiên",
+    "issuesByStatus": "Issues theo trạng thái",
+    "successRate": "Tỷ lệ thành công",
+    "last14Days": "14 ngày qua"
+  },
+  "activeAgents": "Agent đang hoạt động",
+  "noActiveAgents": "Không có agent nào đang hoạt động."
+}
