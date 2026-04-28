@@ -43,7 +43,12 @@
     "save": "Lưu thay đổi",
     "saving": "Đang lưu...",
     "saveSuccess": "Đã lưu cài đặt công ty.",
-    "saveError": "Không thể lưu cài đặt công ty."
+    "saveError": "Không thể lưu cài đặt công ty.",
+    "tabs": {
+      "general": "Chung",
+      "access": "Quyền truy cập",
+      "invites": "Lời mời"
+    }
   },
   "access": {
     "title": "Quyền truy cập",

@@ -9,13 +9,16 @@ export function ModeBadge({
   deploymentMode?: DeploymentMode;
   deploymentExposure?: DeploymentExposure;
 }) {
-  const { t } = useTranslation("settings");
+  const { t } = useTranslation("common");
+
   if (!deploymentMode) return null;
 
   const label =
     deploymentMode === "local_trusted"
-      ? t("deploymentMode.localTrusted")
-      : t("deploymentMode.authenticated", { exposure: deploymentExposure ?? "private" });
+      ? t("modeBadge.localTrusted")
+      : deploymentExposure === "public"
+        ? t("modeBadge.authenticatedPublic")
+        : t("modeBadge.authenticatedPrivate");
 
   return <Badge variant="outline">{label}</Badge>;
 }
