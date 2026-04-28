@@ -2,9 +2,28 @@
   "title": "Chi phí",
   "tabs": {
     "overview": "Tổng quan",
+    "budgets": "Ngân sách",
+    "providers": "Nhà cung cấp",
+    "billers": "Người lập hóa đơn",
+    "finance": "Tài chính",
     "events": "Sự kiện tài chính",
     "incidents": "Sự cố đang diễn ra"
   },
+  "presets": {
+    "mtd": "Tháng hiện tại",
+    "7d": "7 ngày qua",
+    "30d": "30 ngày qua",
+    "ytd": "Năm hiện tại",
+    "all": "Toàn bộ",
+    "custom": "Tùy chỉnh"
+  },
+  "inferenceLedger": "Sổ cái suy luận",
+  "inferenceLedgerDesc": "Chi phí suy luận theo phạm vi yêu cầu cho khoảng thời gian đã chọn.",
+  "financeLedger": "Sổ cái tài chính",
+  "financeEvents": "Sự kiện tài chính",
+  "budgetLabel": "Ngân sách",
+  "usage": "Sử dụng",
+  "net": "Thuần",
   "metrics": {
     "debits": "Khoản ghi nợ",
     "credits": "Khoản ghi có",

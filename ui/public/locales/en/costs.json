@@ -2,9 +2,28 @@
   "title": "Costs",
   "tabs": {
     "overview": "Overview",
+    "budgets": "Budgets",
+    "providers": "Providers",
+    "billers": "Billers",
+    "finance": "Finance",
     "events": "Finance events",
     "incidents": "Active incidents"
   },
+  "presets": {
+    "mtd": "Month to Date",
+    "7d": "Last 7 Days",
+    "30d": "Last 30 Days",
+    "ytd": "Year to Date",
+    "all": "All Time",
+    "custom": "Custom"
+  },
+  "inferenceLedger": "Inference ledger",
+  "inferenceLedgerDesc": "Request-scoped inference spend for the selected period.",
+  "financeLedger": "Finance ledger",
+  "financeEvents": "Finance events",
+  "budgetLabel": "Budget",
+  "usage": "usage",
+  "net": "Net",
   "metrics": {
     "debits": "Debits",
     "credits": "Credits",
