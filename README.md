@@ -360,7 +360,7 @@ paperclipai configure
 
 ### Cách 2 — Cài đặt bằng Docker
 
-Docker giúp chạy Paperclip trong môi trường cô lập, không ảnh hưởng đến hệ thống máy tính của bạn.
+Docker giúp chạy Paperclip trong môi trường cô lập, không ảnh hưởng đến hệ thống máy tính của bạn. Có hai lựa chọn: **Quickstart** (đơn giản, cho người mới) và **Full stack** (với PostgreSQL riêng, cho production).
 
 #### Yêu cầu
 
@@ -381,21 +381,88 @@ git clone https://github.com/paperclipai/paperclip.git
 cd paperclip
 ```
 
-#### Bước 2 — Tạo file cấu hình môi trường
+---
+
+#### Tùy chọn A — Quickstart (một container, không cần PostgreSQL riêng)
+
+Đây là cách đơn giản nhất để chạy Paperclip bằng Docker. Dữ liệu được lưu trong thư mục `./data/docker-paperclip` trên máy bạn.
+
+```bash
+# Linux / macOS
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+```powershell
+# Windows PowerShell
+$env:BETTER_AUTH_SECRET = -join ((48..57) + (97..102) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+Sau khi khởi động, mở trình duyệt và truy cập: `http://localhost:3100`
+
+Lần đầu chạy sẽ mất vài phút để build image. Các lần sau sẽ nhanh hơn.
+
+**Thêm API key cho agent AI (tùy chọn):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  ANTHROPIC_API_KEY=sk-ant-... \
+  OPENAI_API_KEY=sk-... \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+**Đổi cổng (nếu 3100 đã bị chiếm):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  PAPERCLIP_PORT=3200 \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+**Chạy ở chế độ nền (background):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build -d
+```
+
+**Xem log khi chạy nền:**
+
+```bash
+docker compose -f docker/docker-compose.quickstart.yml logs -f
+```
+
+**Dừng server:**
+
+```bash
+docker compose -f docker/docker-compose.quickstart.yml down
+```
+
+Dữ liệu được lưu trong thư mục `./data/docker-paperclip` trên máy bạn và tồn tại qua các lần restart.
+
+---
+
+#### Tùy chọn B — Full stack (server + PostgreSQL riêng)
+
+Dùng khi bạn muốn có PostgreSQL độc lập (phù hợp hơn cho môi trường production hoặc khi cần hiệu năng cao hơn).
+
+**Bước 2 — Tạo file cấu hình môi trường**
 
 Tạo file `.env` trong thư mục gốc của dự án:
 
 ```bash
-# Tạo secret bảo mật ngẫu nhiên (bắt buộc)
-# Linux/macOS:
-echo "BETTER_AUTH_SECRET=$(openssl rand -base64 32)" > .env
-
-# Windows PowerShell:
-# $secret = [Convert]::ToBase64String((1..32 | ForEach-Object { Get-Random -Maximum 256 }))
-# "BETTER_AUTH_SECRET=$secret" | Out-File -Encoding utf8 .env
+# Linux/macOS — tạo secret ngẫu nhiên và lưu vào .env
+echo "BETTER_AUTH_SECRET=$(openssl rand -hex 32)" > .env
 ```
 
-Mở file `.env` vừa tạo và thêm các biến cần thiết:
+```powershell
+# Windows PowerShell
+$secret = -join ((48..57) + (97..102) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+"BETTER_AUTH_SECRET=$secret" | Out-File -Encoding utf8 .env
+```
+
+Mở file `.env` và thêm các biến cần thiết:
 
 ```env
 # Bắt buộc — secret để mã hóa phiên đăng nhập
@@ -409,23 +476,15 @@ ANTHROPIC_API_KEY=sk-ant-...
 OPENAI_API_KEY=sk-...
 ```
 
-#### Bước 3 — Khởi động bằng Docker Compose
-
-Chạy lệnh sau để build và khởi động toàn bộ hệ thống (server + PostgreSQL):
+**Bước 3 — Khởi động bằng Docker Compose**
 
 ```bash
 docker compose -f docker/docker-compose.yml up --build
 ```
 
-Lần đầu chạy sẽ mất vài phút để build image. Các lần sau sẽ nhanh hơn.
+Sau khi khởi động thành công, mở trình duyệt và truy cập: `http://localhost:3100`
 
-Sau khi khởi động thành công, mở trình duyệt và truy cập:
-
-```
-http://localhost:3100
-```
-
-**Chạy ở chế độ nền (background):**
+**Chạy ở chế độ nền:**
 
 ```bash
 docker compose -f docker/docker-compose.yml up --build -d
@@ -443,23 +502,13 @@ docker compose -f docker/docker-compose.yml logs -f
 docker compose -f docker/docker-compose.yml down
 ```
 
-#### Tùy chỉnh cổng (port)
-
-Nếu cổng 3100 đã bị chiếm, thêm vào file `.env`:
-
-```env
-PAPERCLIP_PORT=3200
-```
-
-Hoặc đặt trực tiếp khi chạy:
+**Tùy chỉnh cổng:**
 
 ```bash
 PAPERCLIP_PORT=3200 docker compose -f docker/docker-compose.yml up -d
 ```
 
-#### Dữ liệu được lưu ở đâu?
-
-Dữ liệu Paperclip được lưu trong Docker volumes:
+#### Dữ liệu được lưu ở đâu? (Full stack)
 
 | Volume | Nội dung |
 | ------ | -------- |
@@ -472,14 +521,24 @@ Volumes này tồn tại ngay cả khi bạn dừng hoặc xóa container. Để
 docker compose -f docker/docker-compose.yml down -v
 ```
 
-> **Cảnh báo:** Lệnh trên sẽ xóa toàn bộ dữ liệu. Hãy sao lưu trước nếu cần.
+> **Cảnh báo:** Lệnh `-v` sẽ xóa toàn bộ dữ liệu bao gồm database. Hãy sao lưu trước nếu cần.
+
+---
 
 #### Cập nhật lên phiên bản mới
 
 ```bash
 git pull
+
+# Quickstart:
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build -d
+
+# Full stack:
 docker compose -f docker/docker-compose.yml up --build -d
 ```
+
+> **Lưu ý:** Khi dùng Quickstart, `BETTER_AUTH_SECRET` cần giữ nguyên giá trị cũ giữa các lần restart (không tạo mới) để phiên đăng nhập không bị mất. Hãy lưu secret vào file `.env` hoặc biến môi trường của hệ thống sau lần đầu cài đặt.
 
 ---
 
