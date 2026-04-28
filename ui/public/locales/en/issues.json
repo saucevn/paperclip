@@ -61,11 +61,13 @@
   "blockedNotice": {
     "single": "Work on this issue is blocked by the linked issue until it is complete.",
     "multiple": "Work on this issue is blocked by the linked issues until they are complete.",
-    "blockedSingle": "Work on this issue is blocked by the linked issue until it is complete. Comments still wake the assignee for questions or triage.",
-    "blockedMultiple": "Work on this issue is blocked by the linked issues until they are complete. Comments still wake the assignee for questions or triage.",
-    "stalledSingle": "Work on this issue is blocked by the linked issue, but the chain is stalled in review without a clear next step. Resolve the stalled review below or remove it as a blocker.",
-    "stalledMultiple": "Work on this issue is blocked by the linked issues, but the chain is stalled in review without a clear next step. Resolve the stalled reviews below or remove them as blockers.",
-    "noLinkedIssue": "Work on this issue is blocked until it is moved back to todo. Comments still wake the assignee for questions or triage.",
+    "linkedIssue_one": "the linked issue",
+    "linkedIssue_other": "the linked issues",
+    "stalled_one": "Work on this issue is blocked by {{blocker}}, but the chain is stalled in review without a clear next step. Resolve the stalled review below or remove it as a blocker.",
+    "stalled_other": "Work on this issue is blocked by {{blocker}}, but the chain is stalled in review without a clear next step. Resolve the stalled reviews below or remove them as blockers.",
+    "waiting_one": "Work on this issue is blocked by {{blocker}} until it is complete. Comments still wake the assignee for questions or triage.",
+    "waiting_other": "Work on this issue is blocked by {{blocker}} until they are complete. Comments still wake the assignee for questions or triage.",
+    "noBlockers": "Work on this issue is blocked until it is moved back to todo. Comments still wake the assignee for questions or triage.",
     "stalledInReview": "Stalled in review",
     "ultimatelyWaitingOn": "Ultimately waiting on"
   },

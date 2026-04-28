@@ -16,6 +16,8 @@ export function IssueBlockedNotice({
   const { t } = useTranslation("issues");
 
   if (blockers.length === 0 && issueStatus !== "blocked") return null;
+
+  const blockerLabel = t("blockedNotice.linkedIssue", { count: blockers.length });
   const terminalBlockers = blockers
     .flatMap((blocker) => blocker.terminalBlockers ?? [])
     .filter((blocker, index, all) => all.findIndex((candidate) => candidate.id === blocker.id) === index);
@@ -70,13 +72,9 @@ export function IssueBlockedNotice({
           <p className="leading-5">
             {blockers.length > 0
               ? isStalled
-                ? stalledLeafBlockers.length > 1
-                  ? t("blockedNotice.stalledMultiple")
-                  : t("blockedNotice.stalledSingle")
-                : blockers.length > 1
-                  ? t("blockedNotice.blockedMultiple")
-                  : t("blockedNotice.blockedSingle")
-              : t("blockedNotice.noLinkedIssue")}
+                ? t("blockedNotice.stalled", { count: stalledLeafBlockers.length, blocker: blockerLabel })
+                : t("blockedNotice.waiting", { count: blockers.length, blocker: blockerLabel })
+              : t("blockedNotice.noBlockers")}
           </p>
           {blockers.length > 0 ? (
             <div className="flex flex-wrap gap-1.5">

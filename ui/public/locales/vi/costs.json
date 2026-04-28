@@ -43,5 +43,10 @@
   "saving": "Đang lưu...",
   "accountLevelCharges": "Phí cấp độ tài khoản",
   "noEvents": "Không có sự kiện tài chính nào.",
-  "noIncidents": "Không có sự cố đang diễn ra."
+  "noIncidents": "Không có sự cố đang diễn ra.",
+  "sidebarMarker": {
+    "healthy": "Ngân sách bình thường",
+    "warning": "Cảnh báo ngân sách",
+    "paused": "Tạm dừng do ngân sách"
+  }
 }

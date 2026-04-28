@@ -17,7 +17,12 @@ export function BudgetSidebarMarker({
   level?: BudgetSidebarMarkerLevel;
 }) {
   const { t } = useTranslation("costs");
-  const accessibleTitle = title ?? t(`budgetSidebarMarker.${level}`);
+  const defaultTitles: Record<BudgetSidebarMarkerLevel, string> = {
+    healthy: t("sidebarMarker.healthy"),
+    warning: t("sidebarMarker.warning"),
+    critical: t("sidebarMarker.paused"),
+  };
+  const accessibleTitle = title ?? defaultTitles[level];
 
   return (
     <span
