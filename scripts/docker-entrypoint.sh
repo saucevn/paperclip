@@ -26,4 +26,16 @@ if [ "$changed" = "1" ]; then
     chown -R node:node /paperclip
 fi
 
+# Support a 'maintain' subcommand for running the database maintenance script
+# standalone (e.g., as a Docker init/one-shot service or for manual invocation).
+#
+# Usage inside the container:
+#   docker run --rm <image> maintain
+#   docker exec <container> docker-entrypoint.sh maintain
+if [ "$1" = "maintain" ]; then
+    exec gosu node node \
+        --import ./server/node_modules/tsx/dist/loader.mjs \
+        packages/db/src/maintain.ts
+fi
+
 exec gosu node "$@"

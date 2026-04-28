@@ -311,6 +311,293 @@ This starts the API server at `http://localhost:3100`. An embedded PostgreSQL da
 
 <br/>
 
+---
+
+## Hướng dẫn cài đặt (Tiếng Việt)
+
+> Phần này dành cho cộng đồng nói tiếng Việt. Các phần còn lại của tài liệu sử dụng tiếng Anh.
+
+### Yêu cầu hệ thống
+
+| Phương pháp | Yêu cầu |
+| ----------- | ------- |
+| **npx (khuyến nghị)** | Node.js 20+, pnpm 9.15+ |
+| **Docker** | Docker Engine 24+, Docker Compose v2+ |
+| **Thủ công (source)** | Node.js 20+, pnpm 9.15+ |
+
+---
+
+### Cách 1 — Cài đặt nhanh bằng npx (dễ nhất)
+
+Đây là cách nhanh nhất để chạy Paperclip lần đầu. Không cần tài khoản, không cần cài thêm phần mềm.
+
+```bash
+npx paperclipai onboard --yes
+```
+
+Lệnh trên sẽ tự động:
+- Tạo file cấu hình
+- Khởi tạo cơ sở dữ liệu PostgreSQL nhúng (không cần cài Postgres riêng)
+- Khởi động server tại `http://localhost:3100`
+
+**Cài đặt chế độ mạng LAN hoặc Tailscale** (để truy cập từ điện thoại hoặc máy khác):
+
+```bash
+# Truy cập qua mạng nội bộ (LAN)
+npx paperclipai onboard --yes --bind lan
+
+# Truy cập qua Tailscale
+npx paperclipai onboard --yes --bind tailnet
+```
+
+Nếu đã cài đặt trước đó, chạy lại `onboard` sẽ giữ nguyên cấu hình cũ. Dùng lệnh sau để chỉnh sửa cấu hình:
+
+```bash
+paperclipai configure
+```
+
+---
+
+### Cách 2 — Cài đặt bằng Docker
+
+Docker giúp chạy Paperclip trong môi trường cô lập, không ảnh hưởng đến hệ thống máy tính của bạn. Có hai lựa chọn: **Quickstart** (đơn giản, cho người mới) và **Full stack** (với PostgreSQL riêng, cho production).
+
+#### Yêu cầu
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/macOS) hoặc Docker Engine (Linux)
+- Docker Compose v2 (đã được tích hợp sẵn trong Docker Desktop)
+
+Kiểm tra Docker đã cài chưa:
+
+```bash
+docker --version        # Docker version 24.x.x trở lên
+docker compose version  # Docker Compose version v2.x.x trở lên
+```
+
+#### Bước 1 — Clone mã nguồn
+
+```bash
+git clone https://github.com/paperclipai/paperclip.git
+cd paperclip
+```
+
+---
+
+#### Tùy chọn A — Quickstart (một container, không cần PostgreSQL riêng)
+
+Đây là cách đơn giản nhất để chạy Paperclip bằng Docker. Dữ liệu được lưu trong thư mục `./data/docker-paperclip` trên máy bạn.
+
+```bash
+# Linux / macOS
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+```powershell
+# Windows PowerShell
+$env:BETTER_AUTH_SECRET = -join ((48..57) + (97..102) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+Sau khi khởi động, mở trình duyệt và truy cập: `http://localhost:3100`
+
+Lần đầu chạy sẽ mất vài phút để build image. Các lần sau sẽ nhanh hơn.
+
+**Thêm API key cho agent AI (tùy chọn):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  ANTHROPIC_API_KEY=sk-ant-... \
+  OPENAI_API_KEY=sk-... \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+**Đổi cổng (nếu 3100 đã bị chiếm):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  PAPERCLIP_PORT=3200 \
+  docker compose -f docker/docker-compose.quickstart.yml up --build
+```
+
+**Chạy ở chế độ nền (background):**
+
+```bash
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build -d
+```
+
+**Xem log khi chạy nền:**
+
+```bash
+docker compose -f docker/docker-compose.quickstart.yml logs -f
+```
+
+**Dừng server:**
+
+```bash
+docker compose -f docker/docker-compose.quickstart.yml down
+```
+
+Dữ liệu được lưu trong thư mục `./data/docker-paperclip` trên máy bạn và tồn tại qua các lần restart.
+
+---
+
+#### Tùy chọn B — Full stack (server + PostgreSQL riêng)
+
+Dùng khi bạn muốn có PostgreSQL độc lập (phù hợp hơn cho môi trường production hoặc khi cần hiệu năng cao hơn).
+
+**Bước 2 — Tạo file cấu hình môi trường**
+
+Tạo file `.env` trong thư mục gốc của dự án:
+
+```bash
+# Linux/macOS — tạo secret ngẫu nhiên và lưu vào .env
+echo "BETTER_AUTH_SECRET=$(openssl rand -hex 32)" > .env
+```
+
+```powershell
+# Windows PowerShell
+$secret = -join ((48..57) + (97..102) | Get-Random -Count 64 | ForEach-Object {[char]$_})
+"BETTER_AUTH_SECRET=$secret" | Out-File -Encoding utf8 .env
+```
+
+Mở file `.env` và thêm các biến cần thiết:
+
+```env
+# Bắt buộc — secret để mã hóa phiên đăng nhập
+BETTER_AUTH_SECRET=<secret-ngẫu-nhiên-ở-bước-trên>
+
+# URL công khai của server (thay đổi nếu deploy lên server thật)
+PAPERCLIP_PUBLIC_URL=http://localhost:3100
+
+# Tùy chọn — API key cho các agent AI
+ANTHROPIC_API_KEY=sk-ant-...
+OPENAI_API_KEY=sk-...
+```
+
+**Bước 3 — Khởi động bằng Docker Compose**
+
+```bash
+docker compose -f docker/docker-compose.yml up --build
+```
+
+Sau khi khởi động thành công, mở trình duyệt và truy cập: `http://localhost:3100`
+
+**Chạy ở chế độ nền:**
+
+```bash
+docker compose -f docker/docker-compose.yml up --build -d
+```
+
+**Xem log khi chạy nền:**
+
+```bash
+docker compose -f docker/docker-compose.yml logs -f
+```
+
+**Dừng server:**
+
+```bash
+docker compose -f docker/docker-compose.yml down
+```
+
+**Tùy chỉnh cổng:**
+
+```bash
+PAPERCLIP_PORT=3200 docker compose -f docker/docker-compose.yml up -d
+```
+
+#### Dữ liệu được lưu ở đâu? (Full stack)
+
+| Volume | Nội dung |
+| ------ | -------- |
+| `pgdata` | Cơ sở dữ liệu PostgreSQL |
+| `paperclip-data` | File cấu hình, agent data, secrets |
+
+Volumes này tồn tại ngay cả khi bạn dừng hoặc xóa container. Để xóa hoàn toàn dữ liệu:
+
+```bash
+docker compose -f docker/docker-compose.yml down -v
+```
+
+> **Cảnh báo:** Lệnh `-v` sẽ xóa toàn bộ dữ liệu bao gồm database. Hãy sao lưu trước nếu cần.
+
+---
+
+#### Cập nhật lên phiên bản mới
+
+```bash
+git pull
+
+# Quickstart:
+BETTER_AUTH_SECRET=$(openssl rand -hex 32) \
+  docker compose -f docker/docker-compose.quickstart.yml up --build -d
+
+# Full stack:
+docker compose -f docker/docker-compose.yml up --build -d
+```
+
+> **Lưu ý:** Khi dùng Quickstart, `BETTER_AUTH_SECRET` cần giữ nguyên giá trị cũ giữa các lần restart (không tạo mới) để phiên đăng nhập không bị mất. Hãy lưu secret vào file `.env` hoặc biến môi trường của hệ thống sau lần đầu cài đặt.
+
+---
+
+### Cách 3 — Cài đặt thủ công từ mã nguồn
+
+Dùng cách này nếu bạn muốn phát triển hoặc tùy chỉnh Paperclip.
+
+```bash
+# Clone mã nguồn
+git clone https://github.com/paperclipai/paperclip.git
+cd paperclip
+
+# Cài đặt dependencies
+pnpm install
+
+# Khởi động ở chế độ phát triển (development)
+pnpm dev
+```
+
+Server sẽ chạy tại `http://localhost:3100`. Cơ sở dữ liệu PostgreSQL nhúng được tạo tự động — không cần cài thêm.
+
+**Các lệnh thường dùng:**
+
+```bash
+pnpm dev          # Chạy server + UI, tự reload khi có thay đổi
+pnpm dev:server   # Chỉ chạy server API
+pnpm build        # Build production
+pnpm test         # Chạy test
+```
+
+---
+
+### Câu hỏi thường gặp
+
+**Tôi gặp lỗi "port already in use"?**
+Cổng 3100 đã bị sử dụng. Dùng `PAPERCLIP_PORT=3200` để đổi cổng, hoặc tìm và dừng tiến trình đang chiếm cổng:
+```bash
+lsof -i :3100   # macOS/Linux
+netstat -ano | findstr 3100   # Windows
+```
+
+**Tôi muốn truy cập Paperclip từ điện thoại hoặc máy khác trong mạng LAN?**
+Thêm vào file `.env`:
+```env
+PAPERCLIP_PUBLIC_URL=http://<địa-chỉ-IP-máy-tính>:3100
+```
+Sau đó khởi động lại. Đảm bảo firewall cho phép cổng 3100.
+
+**Dữ liệu của tôi có được lưu khi restart container không?**
+Có. Dữ liệu được lưu trong Docker volumes và tồn tại qua các lần restart. Chỉ mất khi bạn chạy `down -v`.
+
+**Tôi cần hỗ trợ thêm?**
+- [Discord](https://discord.gg/m4HZY7xNG3) — Cộng đồng hỗ trợ (tiếng Anh)
+- [GitHub Issues](https://github.com/paperclipai/paperclip/issues) — Báo lỗi
+
+---
+
+<br/>
+
 ## FAQ
 
 **What does a typical setup look like?**

@@ -15,6 +15,18 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  migrate:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    command: ["node", "--import", "./server/node_modules/tsx/dist/loader.mjs", "packages/db/src/maintain.ts"]
+    environment:
+      DATABASE_URL: postgres://paperclip:paperclip@db:5432/paperclip
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
   server:
     build:
       context: ..
@@ -29,11 +41,14 @@ services:
       PAPERCLIP_DEPLOYMENT_EXPOSURE: "private"
       PAPERCLIP_PUBLIC_URL: "${PAPERCLIP_PUBLIC_URL:-http://localhost:3100}"
       BETTER_AUTH_SECRET: "${BETTER_AUTH_SECRET}"
+      PAPERCLIP_MIGRATION_AUTO_APPLY: "true"
     volumes:
       - paperclip-data:/paperclip
     depends_on:
       db:
         condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
 
 volumes:
   pgdata:
