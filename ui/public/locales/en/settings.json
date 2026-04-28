@@ -43,7 +43,12 @@
     "save": "Save changes",
     "saving": "Saving...",
     "saveSuccess": "Company settings saved.",
-    "saveError": "Failed to save company settings."
+    "saveError": "Failed to save company settings.",
+    "tabs": {
+      "general": "General",
+      "access": "Access",
+      "invites": "Invites"
+    }
   },
   "access": {
     "title": "Access",

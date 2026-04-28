@@ -1,5 +1,6 @@
 import type { IssueBlockerAttention, IssueRelationIssueSummary } from "@paperclipai/shared";
 import { AlertTriangle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { createIssueDetailPath } from "../lib/issueDetailBreadcrumb";
 import { IssueLinkQuicklook } from "./IssueLinkQuicklook";
 
@@ -12,9 +13,11 @@ export function IssueBlockedNotice({
   blockers: IssueRelationIssueSummary[];
   blockerAttention?: IssueBlockerAttention | null;
 }) {
+  const { t } = useTranslation("issues");
+
   if (blockers.length === 0 && issueStatus !== "blocked") return null;
 
-  const blockerLabel = blockers.length === 1 ? "the linked issue" : "the linked issues";
+  const blockerLabel = t("blockedNotice.linkedIssue", { count: blockers.length });
   const terminalBlockers = blockers
     .flatMap((blocker) => blocker.terminalBlockers ?? [])
     .filter((blocker, index, all) => all.findIndex((candidate) => candidate.id === blocker.id) === index);
@@ -69,11 +72,9 @@ export function IssueBlockedNotice({
           <p className="leading-5">
             {blockers.length > 0
               ? isStalled
-                ? stalledLeafBlockers.length > 1
-                  ? <>Work on this issue is blocked by {blockerLabel}, but the chain is stalled in review without a clear next step. Resolve the stalled reviews below or remove them as blockers.</>
-                  : <>Work on this issue is blocked by {blockerLabel}, but the chain is stalled in review without a clear next step. Resolve the stalled review below or remove it as a blocker.</>
-                : <>Work on this issue is blocked by {blockerLabel} until {blockers.length === 1 ? "it is" : "they are"} complete. Comments still wake the assignee for questions or triage.</>
-              : <>Work on this issue is blocked until it is moved back to todo. Comments still wake the assignee for questions or triage.</>}
+                ? t("blockedNotice.stalled", { count: stalledLeafBlockers.length, blocker: blockerLabel })
+                : t("blockedNotice.waiting", { count: blockers.length, blocker: blockerLabel })
+              : t("blockedNotice.noBlockers")}
           </p>
           {blockers.length > 0 ? (
             <div className="flex flex-wrap gap-1.5">
@@ -83,14 +84,14 @@ export function IssueBlockedNotice({
           {showStalledRow ? (
             <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <span className="text-xs font-medium text-amber-800 dark:text-amber-200">
-                Stalled in review
+                {t("blockedNotice.stalledInReview")}
               </span>
               {stalledLeafBlockers.map(renderBlockerChip)}
             </div>
           ) : terminalBlockers.length > 0 ? (
             <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
               <span className="text-xs font-medium text-amber-800 dark:text-amber-200">
-                Ultimately waiting on
+                {t("blockedNotice.ultimatelyWaitingOn")}
               </span>
               {terminalBlockers.map(renderBlockerChip)}
             </div>

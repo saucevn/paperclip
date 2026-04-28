@@ -85,5 +85,11 @@
   "none": "None",
   "all": "All",
   "live": "Live",
-  "new": "New"
+  "new": "New",
+  "propertiesPanel": "Properties",
+  "modeBadge": {
+    "localTrusted": "Local trusted",
+    "authenticatedPrivate": "Authenticated private",
+    "authenticatedPublic": "Authenticated public"
+  }
 }

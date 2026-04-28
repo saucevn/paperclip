@@ -38,5 +38,10 @@
   "saving": "Saving...",
   "accountLevelCharges": "Account-level charges",
   "noEvents": "No finance events.",
-  "noIncidents": "No active incidents."
+  "noIncidents": "No active incidents.",
+  "sidebarMarker": {
+    "healthy": "Budget healthy",
+    "warning": "Budget warning",
+    "paused": "Paused by budget"
+  }
 }
