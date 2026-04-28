@@ -2,6 +2,7 @@ const BASE = "/api";
 
 export class ApiError extends Error {
   status: number;
+  code: string | undefined;
   body: unknown;
 
   constructor(message: string, status: number, body: unknown) {
@@ -9,6 +10,7 @@ export class ApiError extends Error {
     this.name = "ApiError";
     this.status = status;
     this.body = body;
+    this.code = (body as { code?: string } | null)?.code;
   }
 }
 

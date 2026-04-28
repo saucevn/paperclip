@@ -105,7 +105,7 @@
     "export": "Xuất",
     "live": "Trực tiếp",
     "myIssues": "Issues của tôi",
-    "heartbeats": "Heartbeats",
+    "heartbeats": "Nhịp lập lịch",
     "settings": "Cài đặt",
     "liveRuns": "Chạy trực tiếp",
     "joinRequests": "Yêu cầu tham gia",
@@ -118,6 +118,8 @@
   "companyMenu": {
     "addCompany": "Thêm công ty",
     "noCompanies": "Chưa có công ty",
-    "switchCompany": "Chuyển công ty"
+    "switchCompany": "Chuyển công ty",
+    "importCompany": "Nhập công ty",
+    "exportCompany": "Xuất công ty"
   }
 }

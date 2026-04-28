@@ -7,7 +7,10 @@
     "overview": "Tổng quan",
     "issues": "Issues",
     "activity": "Hoạt động",
-    "settings": "Cài đặt"
+    "settings": "Cài đặt",
+    "configuration": "Cấu hình",
+    "budget": "Ngân sách",
+    "workspaces": "Không gian làm việc"
   },
   "detail": {
     "description": "Mô tả",
@@ -19,7 +22,10 @@
     "targetDate": "Ngày mục tiêu",
     "noLead": "Chưa có người phụ trách",
     "noMembers": "Chưa có thành viên",
-    "noTargetDate": "Chưa có ngày mục tiêu"
+    "noTargetDate": "Chưa có ngày mục tiêu",
+    "targetDateLabel": "Ngày mục tiêu",
+    "pausedByBudget": "Đã tạm dừng do ngân sách vượt mức",
+    "loadingWorkspaces": "Đang tải không gian làm việc..."
   },
   "status": {
     "active": "Đang hoạt động",
@@ -28,5 +34,95 @@
     "cancelled": "Đã hủy"
   },
   "noIssues": "Không có issue nào trong dự án này.",
-  "archivedAt": "Đã lưu trữ {{date}}"
+  "archivedAt": "Đã lưu trữ {{date}}",
+  "workspace": {
+    "heading": "Không gian làm việc dự án",
+    "subheading": "Cấu hình không gian làm việc cụ thể mà Paperclip gắn kết với dự án này. Các giá trị này điều khiển hành vi checkout theo từng workspace, dịch vụ runtime mặc định cho các execution workspace con và cho phép bạn ghi đè lệnh cài đặt hoặc dọn dẹp khi một workspace cần xử lý đặc biệt.",
+    "primaryBadge": "Workspace chính",
+    "secondaryBadge": "Workspace phụ",
+    "primaryDesc": "Đây là workspace codebase chính của dự án.",
+    "makePrimary": "Đặt làm chính",
+    "backToWorkspaces": "Quay lại workspaces",
+    "saveChanges": "Lưu thay đổi",
+    "reset": "Đặt lại",
+    "noUnsavedChanges": "Không có thay đổi chưa lưu.",
+    "fields": {
+      "workspaceName": "Tên workspace",
+      "workspaceNamePlaceholder": "Tên workspace",
+      "visibility": "Chế độ hiển thị",
+      "sourceType": "Loại nguồn",
+      "localPath": "Đường dẫn cục bộ",
+      "localPathPlaceholder": "/đường/dẫn/tuyệt/đối/đến/workspace",
+      "repoUrl": "URL repo",
+      "repoUrlPlaceholder": "https://github.com/org/repo",
+      "repoRef": "Ref repo",
+      "repoRefPlaceholder": "origin/main",
+      "defaultRef": "Ref mặc định",
+      "defaultRefPlaceholder": "origin/main",
+      "sharedWorkspaceKey": "Khóa workspace dùng chung",
+      "sharedWorkspaceKeyPlaceholder": "frontend",
+      "remoteProvider": "Nhà cung cấp từ xa",
+      "remoteProviderPlaceholder": "codespaces",
+      "remoteWorkspaceRef": "Ref workspace từ xa",
+      "remoteWorkspaceRefPlaceholder": "workspace-123",
+      "setupCommand": "Lệnh cài đặt",
+      "setupCommandHint": "Chạy khi workspace này cần bootstrap tùy chỉnh",
+      "setupCommandPlaceholder": "pnpm install && pnpm dev",
+      "cleanupCommand": "Lệnh dọn dẹp",
+      "cleanupCommandHint": "Chạy trước khi teardown execution workspace cấp dự án",
+      "cleanupCommandPlaceholder": "pkill -f vite || true",
+      "advancedRuntimeJson": "JSON runtime nâng cao",
+      "workspaceCommandsJson": "JSON lệnh workspace",
+      "workspaceCommandsJsonHint": "Các execution workspace kế thừa cấu hình này trừ khi ghi đè. Mảng `services` cũ vẫn hoạt động, nhưng `commands` hỗ trợ cả dịch vụ và job."
+    },
+    "facts": {
+      "heading": "Thông tin workspace",
+      "currentState": "Trạng thái hiện tại",
+      "project": "Dự án",
+      "workspaceId": "ID Workspace",
+      "localPath": "Đường dẫn cục bộ",
+      "repo": "Repo",
+      "defaultRef": "Ref mặc định",
+      "updated": "Đã cập nhật",
+      "none": "Không có"
+    },
+    "commands": {
+      "heading": "Lệnh workspace",
+      "subheading": "Dịch vụ và jobs",
+      "description": "Các dịch vụ chạy dài được giám sát ở đây, trong khi các job một lần chạy theo yêu cầu đối với workspace này. Các execution workspace kế thừa cấu hình này trừ khi ghi đè.",
+      "advancedJsonDesc": "Paperclip suy ra Dịch vụ và Jobs từ JSON này. Ưu tiên chỉnh sửa các lệnh có tên trước; sử dụng JSON thô cho cài đặt vòng đời, cổng, độ sẵn sàng hoặc môi trường nâng cao.",
+      "noServicesStarted": "Chưa có dịch vụ nào được khởi động cho workspace này.",
+      "noRuntimeConfig": "Chưa có cấu hình lệnh workspace nào được xác định cho workspace này.",
+      "noJobsConfigured": "Chưa có job một lần nào được cấu hình cho workspace này.",
+      "disabledHint": "Workspace dự án cần thư mục làm việc trước khi chạy lệnh cục bộ, và các dịch vụ cũng cần cấu hình runtime."
+    },
+    "sourceTypes": {
+      "local_path": "Checkout git cục bộ",
+      "local_path_desc": "Đường dẫn cục bộ mà Paperclip có thể sử dụng trực tiếp.",
+      "non_git_path": "Đường dẫn cục bộ không phải git",
+      "non_git_path_desc": "Thư mục cục bộ không có ngữ nghĩa git.",
+      "git_repo": "Repo git từ xa",
+      "git_repo_desc": "URL repo với refs tùy chọn và checkout cục bộ.",
+      "remote_managed": "Workspace được quản lý từ xa",
+      "remote_managed_desc": "Workspace được lưu trữ và theo dõi bởi tham chiếu bên ngoài."
+    },
+    "visibility": {
+      "default": "Mặc định",
+      "advanced": "Nâng cao"
+    },
+    "loading": "Đang tải workspace…",
+    "notFound": "Không tìm thấy workspace cho dự án này.",
+    "errors": {
+      "failedToSave": "Không thể lưu workspace.",
+      "failedToUpdate": "Không thể cập nhật workspace.",
+      "failedToControl": "Không thể điều khiển lệnh workspace.",
+      "failedToLoad": "Không thể tải workspace",
+      "remoteRequiresRef": "Workspace được quản lý từ xa yêu cầu ref workspace từ xa hoặc URL repo.",
+      "requiresPathOrUrl": "Workspace yêu cầu ít nhất một đường dẫn cục bộ hoặc URL repo.",
+      "pathMustBeAbsolute": "Đường dẫn workspace cục bộ phải là đường dẫn tuyệt đối.",
+      "invalidRepoUrl": "URL repo phải là URL hợp lệ.",
+      "invalidJson": "JSON không hợp lệ.",
+      "jsonMustBeObject": "JSON lệnh workspace phải là một đối tượng JSON."
+    }
+  }
 }

@@ -36,14 +36,38 @@
   "company": {
     "title": "Company Settings",
     "name": "Company name",
+    "nameHint": "The display name for your company.",
     "description": "Description",
+    "descriptionHint": "Optional description shown in the company profile.",
     "logo": "Logo",
+    "logoHint": "Upload a PNG, JPEG, WEBP, GIF, or SVG logo image.",
+    "logoUploadFailed": "Logo upload failed",
+    "removeLogo": "Remove logo",
+    "removingLogo": "Removing...",
+    "uploadingLogo": "Uploading logo...",
     "brandColor": "Brand color",
+    "brandColorHint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+    "clear": "Clear",
     "requireBoardApproval": "Require board approval for new hires",
+    "requireBoardApprovalHint": "New agent hires stay pending until approved by board.",
     "save": "Save changes",
     "saving": "Saving...",
+    "saved": "Saved",
     "saveSuccess": "Company settings saved.",
     "saveError": "Failed to save company settings.",
+    "failedToSave": "Failed to save",
+    "sectionGeneral": "General",
+    "sectionAppearance": "Appearance",
+    "sectionHiring": "Hiring",
+    "sectionInvites": "Invites",
+    "sectionCompanyPackages": "Company Packages",
+    "generateOpenClaw": "Generate an OpenClaw agent invite snippet.",
+    "generateOpenClawButton": "Generate OpenClaw Invite Prompt",
+    "copiedSnippet": "Copied snippet",
+    "copySnippet": "Copy snippet",
+    "companyPackagesNote": "Import and export have moved to dedicated pages accessible from the Org Chart header.",
+    "export": "Export",
+    "import": "Import",
     "tabs": {
       "general": "General",
       "access": "Access",
@@ -51,7 +75,8 @@
     }
   },
   "access": {
-    "title": "Access",
+    "title": "Company Access",
+    "description": "Manage company user memberships, membership status, and explicit permission grants for {{company}}.",
     "users": "Users",
     "viewers": "Viewers",
     "operators": "Operators",
@@ -62,7 +87,50 @@
     "removeUser": "Remove user",
     "canCreateAgents": "Can create agents, invite users, assign tasks, and approve join requests",
     "canAssignTasks": "Can assign tasks",
-    "canViewWork": "Can view company work"
+    "canViewWork": "Can view company work",
+    "humans": "Humans",
+    "humansDesc": "Manage human company memberships, status, and grants here.",
+    "colUserAccount": "USER ACCOUNT",
+    "colRole": "ROLE",
+    "colStatus": "STATUS",
+    "colGrants": "GRANTS",
+    "colAction": "ACTION",
+    "roleOwner": "Owner",
+    "statusActive": "active",
+    "noExplicitGrants": "No explicit grants",
+    "edit": "Edit",
+    "remove": "Remove",
+    "cannotRemoveSelf": "You cannot remove yourself."
+  },
+  "invites": {
+    "title": "Company Invites",
+    "description": "Manage join invites for {{company}}.",
+    "createInvite": "Create invite",
+    "chooseRole": "Choose a role",
+    "default": "Default",
+    "creating": "Creating…",
+    "roles": {
+      "viewer": {
+        "label": "Viewer",
+        "description": "Can view company work and follow along without operational permissions.",
+        "gets": "No built-in grants."
+      },
+      "operator": {
+        "label": "Operator",
+        "description": "Recommended for people who need to help run work without managing access.",
+        "gets": "Can assign tasks."
+      },
+      "admin": {
+        "label": "Admin",
+        "description": "Recommended for operators who need to invite people, create agents, and approve joins.",
+        "gets": "Can create agents, invite users, assign tasks, and approve join requests."
+      },
+      "owner": {
+        "label": "Owner",
+        "description": "Full company access, including membership and permission management.",
+        "gets": "Everything in Admin, plus managing members and permission grants."
+      }
+    }
   },
   "workspace": {
     "localGitCheckout": "Local git checkout",
@@ -151,7 +219,45 @@
   },
   "adapters": {
     "title": "Adapters",
-    "noAdapters": "No adapters configured."
+    "noAdapters": "No adapters configured.",
+    "installAdapter": "Install Adapter",
+    "installExternal": "Install External Adapter",
+    "installExternalDesc": "Add an adapter from npm or a local path. The adapter package must export createServerAdapter().",
+    "externalAdapters": "External Adapters",
+    "builtinAdapters": "Built-in Adapters",
+    "noExternalAdapters": "No external adapters installed",
+    "noExternalAdaptersDesc": "Install an adapter package to extend model support.",
+    "alphaNotice": "External adapters are alpha.",
+    "alphaNoticeDesc": "The adapter plugin system is under active development. APIs and storage format may change. Use the power icon to hide adapters from agent menus without removing them.",
+    "loading": "Loading adapters...",
+    "reinstallAdapter": "Reinstall Adapter",
+    "removeAdapter": "Remove Adapter",
+    "confirmRemove": "Are you sure you want to remove the {{type}} adapter? It will be unregistered and removed from the adapter store. npm packages will be cleaned up from disk. This action cannot be undone.",
+    "install": "Install",
+    "installing": "Installing...",
+    "remove": "Remove",
+    "removing": "Removing...",
+    "reinstalling": "Reinstalling...",
+    "cancel": "Cancel"
+  },
+  "heartbeats": {
+    "title": "Scheduler Heartbeats",
+    "description": "Agents with a timer heartbeat enabled across all of your companies.",
+    "loading": "Loading scheduler heartbeats...",
+    "loadError": "Failed to load scheduler heartbeats.",
+    "noHeartbeats": "No scheduler heartbeats match the current criteria.",
+    "active": "active",
+    "disabled": "disabled",
+    "company_one": "company",
+    "company_other": "companies",
+    "enable": "Enable Timer Heartbeat",
+    "disable": "Disable Timer Heartbeat",
+    "disableAll": "Disable All",
+    "disabling": "Disabling...",
+    "disableAllConfirm": "Disable timer heartbeats for all {{count}} enabled {{noun}}?",
+    "never": "never",
+    "on": "On",
+    "off": "Off"
   },
   "experimental": {
     "title": "Experimental",

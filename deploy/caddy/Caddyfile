@@ -1,0 +1,33 @@
+# Caddy reverse proxy config cho Paperclip VN (đơn giản hơn nginx, tự cấp SSL)
+# Cài Caddy: https://caddyserver.com/docs/install
+# Đặt file này vào: /etc/caddy/Caddyfile
+# Khởi động: systemctl enable --now caddy
+#
+# Thay paperclip.example.com bằng domain thực của bạn
+
+paperclip.example.com {
+    # Tự động cấp và gia hạn SSL từ Let's Encrypt
+    reverse_proxy 127.0.0.1:3100 {
+        # WebSocket support
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+        header_up X-Forwarded-Host {host}
+    }
+
+    # Compress responses
+    encode gzip
+
+    # Security headers
+    header {
+        X-Frame-Options SAMEORIGIN
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+
+    # Request size limit (100MB cho file uploads)
+    request_body {
+        max_size 100MB
+    }
+}

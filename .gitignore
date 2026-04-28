@@ -59,3 +59,7 @@ tests/release-smoke/playwright-report/
 .superset/
 .claude/worktrees/
 .env.local
+.env.production
+prod.txt
+prod.txt
+prod.txt

@@ -31,19 +31,43 @@
     "plugins": "Plugin",
     "adapters": "Adapter",
     "experimental": "Thử nghiệm",
-    "heartbeat": "Heartbeat"
+    "heartbeat": "Nhịp lập lịch"
   },
   "company": {
-    "title": "Cài đặt công ty",
+    "title": "Cài Đặt Công Ty",
     "name": "Tên công ty",
+    "nameHint": "Tên hiển thị cho công ty của bạn.",
     "description": "Mô tả",
+    "descriptionHint": "Mô tả tùy chọn hiển thị trong hồ sơ công ty.",
     "logo": "Logo",
+    "logoHint": "Tải lên ảnh logo PNG, JPEG, WEBP, GIF hoặc SVG.",
+    "logoUploadFailed": "Tải logo thất bại",
+    "removeLogo": "Gỡ logo",
+    "removingLogo": "Đang gỡ...",
+    "uploadingLogo": "Đang tải logo...",
     "brandColor": "Màu thương hiệu",
+    "brandColorHint": "Đặt màu sắc cho biểu tượng công ty. Để trống để tự tạo màu.",
+    "clear": "Xóa",
     "requireBoardApproval": "Yêu cầu board phê duyệt cho nhân viên mới",
+    "requireBoardApprovalHint": "Các agent mới tuyển dụng sẽ chờ phê duyệt từ board.",
     "save": "Lưu thay đổi",
     "saving": "Đang lưu...",
+    "saved": "Đã lưu",
     "saveSuccess": "Đã lưu cài đặt công ty.",
     "saveError": "Không thể lưu cài đặt công ty.",
+    "failedToSave": "Không thể lưu",
+    "sectionGeneral": "Chung",
+    "sectionAppearance": "Giao diện",
+    "sectionHiring": "Tuyển dụng",
+    "sectionInvites": "Lời mời",
+    "sectionCompanyPackages": "Gói Công Ty",
+    "generateOpenClaw": "Tạo đoạn mã mời agent OpenClaw.",
+    "generateOpenClawButton": "Tạo Lời Mời OpenClaw",
+    "copiedSnippet": "Đã sao chép đoạn mã",
+    "copySnippet": "Sao chép đoạn mã",
+    "companyPackagesNote": "Import và export đã được chuyển sang các trang riêng có thể truy cập từ tiêu đề Sơ đồ tổ chức.",
+    "export": "Xuất",
+    "import": "Nhập",
     "tabs": {
       "general": "Chung",
       "access": "Quyền truy cập",
@@ -51,7 +75,8 @@
     }
   },
   "access": {
-    "title": "Quyền truy cập",
+    "title": "Quyền Truy Cập Công Ty",
+    "description": "Quản lý tư cách thành viên, trạng thái thành viên và cấp quyền rõ ràng cho {{company}}.",
     "users": "Người dùng",
     "viewers": "Người xem",
     "operators": "Người vận hành",
@@ -62,7 +87,50 @@
     "removeUser": "Xóa người dùng",
     "canCreateAgents": "Có thể tạo agent, mời người dùng, phân công nhiệm vụ và phê duyệt yêu cầu tham gia",
     "canAssignTasks": "Có thể phân công nhiệm vụ",
-    "canViewWork": "Có thể xem công việc của công ty"
+    "canViewWork": "Có thể xem công việc của công ty",
+    "humans": "Con người",
+    "humansDesc": "Quản lý tư cách thành viên người dùng, trạng thái và cấp quyền tại đây.",
+    "colUserAccount": "TÀI KHOẢN NGƯỜI DÙNG",
+    "colRole": "VAI TRÒ",
+    "colStatus": "TRẠNG THÁI",
+    "colGrants": "QUYỀN",
+    "colAction": "HÀNH ĐỘNG",
+    "roleOwner": "Chủ sở hữu",
+    "statusActive": "đang hoạt động",
+    "noExplicitGrants": "Không có quyền rõ ràng",
+    "edit": "Chỉnh sửa",
+    "remove": "Gỡ",
+    "cannotRemoveSelf": "Bạn không thể xóa chính mình."
+  },
+  "invites": {
+    "title": "Lời Mời Công Ty",
+    "description": "Quản lý lời mời tham gia cho {{company}}.",
+    "createInvite": "Tạo lời mời",
+    "chooseRole": "Chọn vai trò",
+    "default": "Mặc định",
+    "creating": "Đang tạo...",
+    "roles": {
+      "viewer": {
+        "label": "Người xem",
+        "description": "Có thể xem công việc công ty và theo dõi mà không cần quyền vận hành.",
+        "gets": "Không có quyền tích hợp sẵn."
+      },
+      "operator": {
+        "label": "Người vận hành",
+        "description": "Được khuyến nghị cho người cần giúp điều hành công việc mà không cần quản lý quyền truy cập.",
+        "gets": "Có thể phân công nhiệm vụ."
+      },
+      "admin": {
+        "label": "Quản trị viên",
+        "description": "Được khuyến nghị cho người vận hành cần mời người, tạo agent và phê duyệt yêu cầu tham gia.",
+        "gets": "Có thể tạo agent, mời người dùng, phân công nhiệm vụ và phê duyệt yêu cầu tham gia."
+      },
+      "owner": {
+        "label": "Chủ sở hữu",
+        "description": "Toàn quyền truy cập công ty, bao gồm quản lý thành viên và quyền.",
+        "gets": "Tất cả quyền của Quản trị viên, cộng với quản lý thành viên và cấp quyền."
+      }
+    }
   },
   "workspace": {
     "localGitCheckout": "Git checkout cục bộ",
@@ -102,7 +170,7 @@
     "installPluginDesc": "Nhập tên gói npm của plugin bạn muốn cài đặt.",
     "npmPackageName": "Tên Gói npm",
     "installing": "Đang cài đặt...",
-    "installExample": "Cài Đặt Ví Dụ",
+    "installExample": "Dùng Thử",
     "remove": "Gỡ bỏ plugin",
     "reinstall": "Cài đặt lại plugin",
     "uninstall": "Gỡ cài đặt",
@@ -151,7 +219,45 @@
   },
   "adapters": {
     "title": "Adapter",
-    "noAdapters": "Chưa có adapter nào được cấu hình."
+    "noAdapters": "Chưa có adapter nào được cấu hình.",
+    "installAdapter": "Cài đặt Adapter",
+    "installExternal": "Cài đặt Adapter Ngoài",
+    "installExternalDesc": "Thêm adapter từ npm hoặc đường dẫn cục bộ. Gói adapter phải export createServerAdapter().",
+    "externalAdapters": "Adapter Ngoài",
+    "builtinAdapters": "Adapter Tích hợp",
+    "noExternalAdapters": "Chưa có adapter ngoài nào được cài đặt",
+    "noExternalAdaptersDesc": "Cài đặt gói adapter để mở rộng hỗ trợ model.",
+    "alphaNotice": "Adapter ngoài đang trong giai đoạn thử nghiệm.",
+    "alphaNoticeDesc": "Hệ thống plugin adapter đang được phát triển tích cực. API và định dạng lưu trữ có thể thay đổi. Dùng biểu tượng nguồn điện để ẩn adapter khỏi menu agent mà không cần gỡ cài đặt.",
+    "loading": "Đang tải adapter...",
+    "reinstallAdapter": "Cài đặt lại Adapter",
+    "removeAdapter": "Gỡ Adapter",
+    "confirmRemove": "Bạn có chắc muốn gỡ adapter {{type}}? Nó sẽ bị hủy đăng ký và xóa khỏi kho adapter. npm packages sẽ được dọn dẹp khỏi ổ đĩa. Thao tác này không thể hoàn tác.",
+    "install": "Cài đặt",
+    "installing": "Đang cài đặt...",
+    "remove": "Gỡ",
+    "removing": "Đang gỡ...",
+    "reinstalling": "Đang cài đặt lại...",
+    "cancel": "Hủy"
+  },
+  "heartbeats": {
+    "title": "Nhịp Lập Lịch",
+    "description": "Các agent có bật nhịp timer trên tất cả các công ty của bạn.",
+    "loading": "Đang tải nhịp lập lịch...",
+    "loadError": "Không thể tải nhịp lập lịch.",
+    "noHeartbeats": "Không có nhịp lập lịch nào phù hợp.",
+    "active": "đang hoạt động",
+    "disabled": "đã vô hiệu hóa",
+    "company_one": "công ty",
+    "company_other": "công ty",
+    "enable": "Bật Timer Heartbeat",
+    "disable": "Tắt Timer Heartbeat",
+    "disableAll": "Tắt tất cả",
+    "disabling": "Đang tắt...",
+    "disableAllConfirm": "Tắt timer heartbeat cho tất cả {{count}} agent đã bật?",
+    "never": "chưa bao giờ",
+    "on": "Bật",
+    "off": "Tắt"
   },
   "experimental": {
     "title": "Thử nghiệm",

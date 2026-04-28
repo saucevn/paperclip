@@ -21,13 +21,87 @@
     "approve": "Approve",
     "reject": "Reject",
     "accept": "Accept",
-    "decline": "Decline"
+    "decline": "Decline",
+    "requestRevision": "Request revision",
+    "markResubmitted": "Mark resubmitted",
+    "deleteDisapprovedAgent": "Delete disapproved agent",
+    "seeFullRequest": "See full request",
+    "postComment": "Post comment",
+    "postingComment": "Posting…",
+    "approving": "Approving...",
+    "rejecting": "Rejecting...",
+    "viewDetails": "View details"
   },
   "budgetOverride": "Budget override",
   "joinRequest": "Join request",
   "approvalFor": "Approval for {{name}}",
   "requestedBy": "Requested by {{name}}",
   "requestedAt": "Requested {{time}}",
+  "requestedByLabel": "Requested by",
+  "approvalRequestCreated": "Approval request created {{time}}",
   "companyAdminRequired": "A company admin must approve your request to join",
-  "visitSettings": "Ask them to visit Company Settings → Access"
+  "visitSettings": "Ask them to visit Company Settings → Access",
+  "approvalNotFound": "Approval not found.",
+  "banner": {
+    "approvalConfirmed": "Approval confirmed",
+    "agentNotified": "Requesting agent was notified to review this approval and linked issues.",
+    "reviewLinkedIssues": "Review linked issues",
+    "reviewLinkedIssue": "Review linked issue",
+    "openHiredAgent": "Open hired agent",
+    "backToApprovals": "Back to approvals"
+  },
+  "linkedIssues": {
+    "title": "Linked Issues",
+    "footer": "Linked issues remain open until the requesting agent follows up and closes them."
+  },
+  "comments": {
+    "title": "Comments ({{count}})",
+    "placeholder": "Add a comment...",
+    "board": "Board"
+  },
+  "decisionNote": "Decision note: {{note}}",
+  "decisionNoteLabel": "Decision note.",
+  "budgetStop": {
+    "resolveFrom": "Resolve this budget stop from the budget controls on",
+    "costsPage": "/costs"
+  },
+  "deleteAgentConfirm": "Delete this disapproved agent? This cannot be undone.",
+  "typeLabels": {
+    "hireAgent": "Hire Agent",
+    "approveCeoStrategy": "CEO Strategy",
+    "budgetOverrideRequired": "Budget Override",
+    "requestBoardApproval": "Board Approval"
+  },
+  "payload": {
+    "fields": {
+      "name": "Name",
+      "role": "Role",
+      "title": "Title",
+      "icon": "Icon",
+      "capabilities": "Capabilities",
+      "adapter": "Adapter",
+      "skills": "Skills",
+      "scope": "Scope",
+      "window": "Window",
+      "metric": "Metric",
+      "limit": "Limit",
+      "observed": "Observed"
+    },
+    "sections": {
+      "summary": "Summary",
+      "recommendedAction": "Recommended action",
+      "onApproval": "On approval",
+      "risks": "Risks",
+      "proposedComment": "Proposed comment"
+    },
+    "budgetDisplay": "Limit {{limit}} · Observed {{observed}}"
+  },
+  "errors": {
+    "approveFailed": "Approve failed",
+    "rejectFailed": "Reject failed",
+    "revisionFailed": "Revision request failed",
+    "resubmitFailed": "Resubmit failed",
+    "commentFailed": "Comment failed",
+    "deleteFailed": "Delete failed"
+  }
 }
