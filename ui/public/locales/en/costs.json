@@ -33,6 +33,11 @@
     "pausedProjects_one": "{{count}} project paused",
     "pausedProjects_other": "{{count}} projects paused"
   },
+  "budgetSidebarMarker": {
+    "healthy": "Budget healthy",
+    "warning": "Budget warning",
+    "critical": "Paused by budget"
+  },
   "updateBudget": "Update budget",
   "setBudget": "Set budget",
   "saving": "Saving...",

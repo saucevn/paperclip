@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { PageTabBar } from "@/components/PageTabBar";
 import { Tabs } from "@/components/ui/tabs";
 import { useLocation, useNavigate } from "@/lib/router";
+import { useTranslation } from "react-i18next";
 
 const NAV_ITEMS = [
   { value: "general" as const, href: "/company/settings" },
@@ -27,6 +28,7 @@ export function CompanySettingsNav() {
   const { t } = useTranslation("settings");
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation("settings");
   const activeTab = getCompanySettingsTab(location.pathname);
 
   const items = NAV_ITEMS.map((item) => ({

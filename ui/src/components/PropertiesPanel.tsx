@@ -7,6 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 export function PropertiesPanel() {
   const { t } = useTranslation("common");
   const { panelContent, panelVisible, setPanelVisible } = usePanel();
+  const { t } = useTranslation("common");
 
   if (!panelContent) return null;
 

@@ -111,5 +111,14 @@
     "title": "Cài đặt thử nghiệm",
     "featureFlags": "Tính năng thử nghiệm",
     "enableFeature": "Bật {{feature}}"
+  },
+  "deploymentMode": {
+    "localTrusted": "Tin cậy cục bộ",
+    "authenticated": "Đã xác thực {{exposure}}"
+  },
+  "companyTabs": {
+    "general": "Chung",
+    "access": "Quyền truy cập",
+    "invites": "Lời mời"
   }
 }
