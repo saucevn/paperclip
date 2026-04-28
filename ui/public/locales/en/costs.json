@@ -42,7 +42,8 @@
     "underBudget": "Under budget ({{percent}}%)",
     "warningThreshold": "Warning ({{percent}}%)",
     "overBudget": "Over budget ({{percent}}%)",
-    "unlimited": "Unlimited budget"
+    "unlimited": "Unlimited budget",
+    "open": "Open"
   },
   "incidents": {
     "active_one": "{{count}} active incident",
@@ -67,5 +68,159 @@
     "healthy": "Budget healthy",
     "warning": "Budget warning",
     "paused": "Paused by budget"
+  },
+  "selectCompany": "Select a company to view costs.",
+  "pageTitle": "Costs",
+  "pageSubtitle": "Inference spend, platform fees, credits, and live quota windows.",
+  "customDateTo": "to",
+  "selectDateRange": "Select a start and end date to load data.",
+  "noEvents_period": "No cost events in this period.",
+  "noBillableEvents": "No billable events in this period.",
+  "noBudgetPolicies": "No budget policies yet. Set agent and project budgets from their detail pages, or use the existing company monthly budget control.",
+  "allProviders": "All providers",
+  "allBillers": "All billers",
+  "budgetDisplay": "Budget {{amount}}",
+  "budgetUtilization": "{{percent}}% of monthly budget consumed in this range.",
+  "topMetrics": {
+    "inferenceSubtitle": "{{tokens}} tokens across request-scoped events",
+    "incidentSubtitle": "{{agents}} agents paused · {{projects}} projects paused",
+    "budgetOfTotal": "{{spent}} of {{total}}",
+    "financeNetSubtitle": "{{debits}} debits · {{credits}} credits",
+    "estimatedInRange": "{{amount}} estimated in range"
+  },
+  "byAgent": {
+    "title": "By agent",
+    "description": "What each agent consumed in the selected period.",
+    "noCosts": "No cost events yet.",
+    "inTokens": "in {{tokens}}",
+    "outTokens": "out {{tokens}}",
+    "runsSuffix": "runs",
+    "apiRuns": "api",
+    "subscriptionRuns": "subscription",
+    "apiRunCount_one": "{{count}} api",
+    "apiRunCount_other": "{{count}} api",
+    "subscriptionRunCount_one": "{{count}} subscription",
+    "subscriptionRunCount_other": "{{count}} subscription",
+    "tokenCount": "{{tokens}} tok"
+  },
+  "byProject": {
+    "title": "By project",
+    "description": "Run costs attributed through project-linked issues.",
+    "noCosts": "No project-attributed run costs yet.",
+    "unattributed": "Unattributed"
+  },
+  "budget": {
+    "controlPlane": "Budget control plane",
+    "controlPlaneDesc": "Hard-stop spend limits for agents and projects. Provider subscription quota stays separate and appears under Providers.",
+    "activeIncidents": "Active incidents",
+    "activeIncidentsSubtitle": "Open soft or hard threshold crossings",
+    "pendingApprovals": "Pending approvals",
+    "pendingApprovalsSubtitle": "Budget override approvals awaiting board action",
+    "pausedAgents": "Paused agents",
+    "pausedAgentsSubtitle": "Agent heartbeats blocked by budget",
+    "pausedProjects": "Paused projects",
+    "pausedProjectsSubtitle": "Project execution blocked by budget",
+    "incidentsTitle": "Active incidents",
+    "incidentsDesc": "Resolve hard stops here by raising the budget or explicitly keeping the scope paused.",
+    "companyBudgets": "Company budgets",
+    "agentBudgets": "Agent budgets",
+    "projectBudgets": "Project budgets",
+    "companyBudgetsDesc": "Company-wide monthly policy.",
+    "agentBudgetsDesc": "Recurring monthly spend policies for individual agents.",
+    "projectBudgetsDesc": "Lifetime spend policies for execution-bound projects."
+  },
+  "finance": {
+    "byBillerTitle": "By biller",
+    "byBillerDesc": "Account-level financial events grouped by who charged or credited them.",
+    "noEvents": "No finance events yet."
+  },
+  "policy": {
+    "observed": "Observed",
+    "budget": "Budget",
+    "noCapConfigured": "No cap configured",
+    "disabled": "Disabled",
+    "softAlertAt": "Soft alert at {{percent}}%",
+    "softAlertPause": "Soft alert at {{percent}}% · {{reason}} pause",
+    "remaining": "Remaining",
+    "unlimited": "Unlimited",
+    "paused": "Paused",
+    "warning": "Warning",
+    "hardStop": "Hard stop",
+    "healthy": "Healthy",
+    "lifetimeBudget": "Lifetime budget",
+    "monthlyBudget": "Monthly UTC budget",
+    "budgetUsd": "Budget (USD)",
+    "invalidAmount": "Enter a valid non-negative dollar amount.",
+    "updateBudget": "Update budget",
+    "setBudget": "Set budget",
+    "saving": "Saving...",
+    "pausedProject": "Execution is paused for this project until the budget is raised or the incident is dismissed.",
+    "pausedScope": "Heartbeats are paused for this scope until the budget is raised or the incident is dismissed."
+  },
+  "incident": {
+    "hardStop": "hard stop",
+    "spentAgainst": "Spending reached {{observed}} against a limit of {{limit}}.",
+    "pausedProject": "Project execution is paused. New work in this project will not start until you resolve the budget incident.",
+    "pausedScope": "This scope is paused. New heartbeats will not start until you resolve the budget incident.",
+    "newBudgetUsd": "New budget (USD)",
+    "raiseBudgetResume": "Raise budget & resume",
+    "applying": "Applying...",
+    "mustExceedSpend": "The new budget must exceed current observed spend.",
+    "keepPaused": "Keep paused",
+    "stateResolved": "Resolved",
+    "stateDismissed": "Dismissed",
+    "stateEscalated": "Escalated",
+    "statePendingApproval": "Pending approval",
+    "stateOpen": "Open"
+  },
+  "biller": {
+    "periodSpend": "Period spend",
+    "allocationPct": "{{pct}}% of allocation",
+    "billingTypes": "Billing types",
+    "upstreamProviders": "Upstream providers",
+    "thisWeek": "this week",
+    "in": "in",
+    "out": "out",
+    "providerCount_one": "{{count}} provider",
+    "providerCount_other": "{{count}} providers",
+    "modelCount_one": "{{count}} model",
+    "modelCount_other": "{{count}} models",
+    "meteredRuns_one": "{{count}} metered run",
+    "meteredRuns_other": "{{count}} metered runs",
+    "subscriptionRuns_one": "{{count}} subscription run",
+    "subscriptionRuns_other": "{{count}} subscription runs"
+  },
+  "accounting": {
+    "title": "Accounting model",
+    "subtitle": "Paperclip now separates request-level inference usage from account-level finance events. That keeps provider reporting honest when the biller is OpenRouter, Cloudflare, Bedrock, or another intermediary.",
+    "inferenceLedger": {
+      "title": "Inference ledger",
+      "description": "Request-scoped usage and billed runs from cost_events.",
+      "point1": "tokens + billed dollars",
+      "point2": "provider, biller, model",
+      "point3": "subscription and overage aware"
+    },
+    "financeLedger": {
+      "title": "Finance ledger",
+      "description": "Account-level charges that are not one prompt-response pair.",
+      "point1": "top-ups, refunds, fees",
+      "point2": "Bedrock provisioned or training charges",
+      "point3": "credit expiries and adjustments"
+    },
+    "liveQuotas": {
+      "title": "Live quotas",
+      "description": "Provider or biller windows that can stop traffic in real time.",
+      "point1": "provider quota windows",
+      "point2": "biller credit systems",
+      "point3": "errors surfaced directly"
+    }
+  },
+  "financeSummary": {
+    "debitsSubtitle": "{{count}} total event in range",
+    "debitsSubtitle_other": "{{count}} total events in range",
+    "creditsSubtitle": "Refunds, offsets, and credit returns",
+    "netLabel": "Net",
+    "netSubtitle": "Debit minus credit for the selected period",
+    "estimatedSubtitle": "Estimated debits that are not yet invoice-authoritative"
   }
 }

@@ -91,5 +91,33 @@
     "localTrusted": "Local trusted",
     "authenticatedPrivate": "Authenticated private",
     "authenticatedPublic": "Authenticated public"
+  },
+  "loading": "Loading...",
+  "failedToLoad": "Failed to load app state",
+  "auth": {
+    "bootstrapRequired": "Instance setup required",
+    "bootstrapHasInvite": "No instance admin exists yet. A bootstrap invite is already active. Check your Paperclip startup logs for the first admin invite URL, or run this command to rotate it:",
+    "bootstrapNoInvite": "No instance admin exists yet. Run this command in your Paperclip environment to generate the first admin invite URL:",
+    "noAccess": "No company access",
+    "noAccessDesc": "This account is signed in, but it does not have an active company membership or instance-admin access on this Paperclip instance.",
+    "noAccessInviteHint": "Use a company invite or sign in with an account that already belongs to this org."
+  },
+  "boardClaim": {
+    "invalidUrl": "Invalid board claim URL.",
+    "loadingChallenge": "Loading claim challenge...",
+    "challengeUnavailableTitle": "Claim challenge unavailable",
+    "challengeExpired": "Challenge is invalid or expired.",
+    "challengeUnavailable": "Claim challenge unavailable.",
+    "claimedTitle": "Board ownership claimed",
+    "claimedDesc": "This instance is now linked to your authenticated user.",
+    "openBoard": "Open board",
+    "signInRequired": "Sign in required",
+    "signInDesc": "Sign in or create an account, then return to this page to claim Board ownership.",
+    "signInButton": "Sign in / Create account",
+    "claimTitle": "Claim Board ownership",
+    "claimDesc": "This will promote your user to instance admin and migrate company ownership access from local trusted mode.",
+    "claimFailed": "Failed to claim board ownership",
+    "claiming": "Claiming…",
+    "claimOwnership": "Claim ownership"
   }
 }

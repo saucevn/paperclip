@@ -21,5 +21,16 @@
     "approveFailed": "Phê duyệt thất bại",
     "approvalApproved": "Đã phê duyệt",
     "approvalRejected": "Đã từ chối"
+  },
+  "server": {
+    "BAD_REQUEST": "Yêu cầu không hợp lệ. Vui lòng kiểm tra lại thông tin nhập.",
+    "UNAUTHORIZED": "Bạn cần đăng nhập để thực hiện thao tác này.",
+    "FORBIDDEN": "Bạn không có quyền thực hiện thao tác này.",
+    "NOT_FOUND": "Không tìm thấy tài nguyên yêu cầu.",
+    "CONFLICT": "Thao tác này mâu thuẫn với trạng thái hiện tại.",
+    "UNPROCESSABLE": "Không thể xử lý yêu cầu này.",
+    "VALIDATION_ERROR": "Vui lòng kiểm tra lại thông tin và thử lại.",
+    "INTERNAL_SERVER_ERROR": "Đã xảy ra lỗi máy chủ. Vui lòng thử lại sau.",
+    "REQUEST_FAILED": "Yêu cầu thất bại. Vui lòng thử lại."
   }
 }

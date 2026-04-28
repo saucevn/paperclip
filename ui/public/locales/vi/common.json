@@ -91,5 +91,33 @@
     "localTrusted": "Local tin cậy",
     "authenticatedPrivate": "Xác thực (riêng tư)",
     "authenticatedPublic": "Xác thực (công khai)"
+  },
+  "loading": "Đang tải...",
+  "failedToLoad": "Không thể tải trạng thái ứng dụng",
+  "auth": {
+    "bootstrapRequired": "Cần thiết lập phiên bản",
+    "bootstrapHasInvite": "Chưa có quản trị viên phiên bản nào. Một lời mời khởi động đã được kích hoạt. Hãy kiểm tra nhật ký khởi động Paperclip để lấy URL lời mời quản trị đầu tiên, hoặc chạy lệnh này để làm mới:",
+    "bootstrapNoInvite": "Chưa có quản trị viên phiên bản nào. Chạy lệnh này trong môi trường Paperclip của bạn để tạo URL lời mời quản trị đầu tiên:",
+    "noAccess": "Không có quyền truy cập công ty",
+    "noAccessDesc": "Tài khoản này đã đăng nhập nhưng không có tư cách thành viên công ty đang hoạt động hoặc quyền truy cập quản trị viên phiên bản trên phiên bản Paperclip này.",
+    "noAccessInviteHint": "Sử dụng lời mời công ty hoặc đăng nhập bằng tài khoản đã thuộc tổ chức này."
+  },
+  "boardClaim": {
+    "invalidUrl": "URL yêu cầu ban quản trị không hợp lệ.",
+    "loadingChallenge": "Đang tải thử thách yêu cầu...",
+    "challengeUnavailableTitle": "Thử thách yêu cầu không khả dụng",
+    "challengeExpired": "Thử thách không hợp lệ hoặc đã hết hạn.",
+    "challengeUnavailable": "Thử thách yêu cầu không khả dụng.",
+    "claimedTitle": "Đã yêu cầu quyền sở hữu ban quản trị",
+    "claimedDesc": "Phiên bản này hiện được liên kết với người dùng đã xác thực của bạn.",
+    "openBoard": "Mở ban quản trị",
+    "signInRequired": "Yêu cầu đăng nhập",
+    "signInDesc": "Đăng nhập hoặc tạo tài khoản, sau đó quay lại trang này để yêu cầu quyền sở hữu ban quản trị.",
+    "signInButton": "Đăng nhập / Tạo tài khoản",
+    "claimTitle": "Yêu cầu quyền sở hữu ban quản trị",
+    "claimDesc": "Thao tác này sẽ nâng cấp người dùng của bạn lên quản trị viên phiên bản và di chuyển quyền sở hữu công ty từ chế độ tin cậy cục bộ.",
+    "claimFailed": "Không thể yêu cầu quyền sở hữu ban quản trị",
+    "claiming": "Đang yêu cầu…",
+    "claimOwnership": "Yêu cầu quyền sở hữu"
   }
 }

@@ -2,5 +2,30 @@
   "title": "Hoạt động",
   "noActivity": "Chưa có hoạt động nào.",
   "filterByType": "Lọc theo loại",
-  "allTypes": "Tất cả loại"
+  "allTypes": "Tất cả loại",
+  "actor": {
+    "system": "Hệ thống",
+    "board": "Ban quản trị",
+    "unknown": "Không xác định"
+  },
+  "charts": {
+    "noRuns": "Chưa có lượt chạy nào",
+    "noIssues": "Không có issue",
+    "legend": {
+      "succeeded": "Thành công",
+      "failed": "Thất bại",
+      "other": "Khác",
+      "critical": "Khẩn cấp",
+      "high": "Cao",
+      "medium": "Trung bình",
+      "low": "Thấp",
+      "todo": "Cần làm",
+      "inProgress": "Đang thực hiện",
+      "inReview": "Đang xét duyệt",
+      "done": "Hoàn thành",
+      "blocked": "Bị chặn",
+      "cancelled": "Đã hủy",
+      "backlog": "Backlog"
+    }
+  }
 }
