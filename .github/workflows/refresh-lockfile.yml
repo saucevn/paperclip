@@ -3,7 +3,7 @@ name: Refresh Lockfile
 on:
   push:
     branches:
-      - develop
+      - main
   workflow_dispatch:
 
 concurrency:
