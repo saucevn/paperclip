@@ -86,5 +86,10 @@
   "all": "Tất cả",
   "live": "Trực tiếp",
   "new": "Mới",
-  "properties": "Thuộc tính"
+  "propertiesPanel": "Thuộc tính",
+  "modeBadge": {
+    "localTrusted": "Local tin cậy",
+    "authenticatedPrivate": "Xác thực (riêng tư)",
+    "authenticatedPublic": "Xác thực (công khai)"
+  }
 }

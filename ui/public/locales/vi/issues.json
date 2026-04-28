@@ -61,13 +61,15 @@
   "blockedNotice": {
     "single": "Công việc trên issue này bị chặn bởi issue được liên kết cho đến khi hoàn thành.",
     "multiple": "Công việc trên issue này bị chặn bởi các issue được liên kết cho đến khi hoàn thành.",
-    "blockedSingle": "Công việc trên issue này bị chặn bởi issue được liên kết cho đến khi hoàn thành. Bình luận vẫn đánh thức người được giao để trả lời hoặc phân loại.",
-    "blockedMultiple": "Công việc trên issue này bị chặn bởi các issue được liên kết cho đến khi hoàn thành. Bình luận vẫn đánh thức người được giao để trả lời hoặc phân loại.",
-    "stalledSingle": "Công việc trên issue này bị chặn bởi issue được liên kết, nhưng chuỗi bị trì hoãn trong xét duyệt mà không có bước tiếp theo rõ ràng. Hãy giải quyết bài xét duyệt bị trì hoãn bên dưới hoặc gỡ bỏ nó khỏi danh sách chặn.",
-    "stalledMultiple": "Công việc trên issue này bị chặn bởi các issue được liên kết, nhưng chuỗi bị trì hoãn trong xét duyệt mà không có bước tiếp theo rõ ràng. Hãy giải quyết các bài xét duyệt bị trì hoãn bên dưới hoặc gỡ bỏ chúng khỏi danh sách chặn.",
-    "noLinkedIssue": "Công việc trên issue này bị chặn cho đến khi được chuyển về trạng thái todo. Bình luận vẫn đánh thức người được giao để trả lời hoặc phân loại.",
-    "stalledInReview": "Bị trì hoãn trong xét duyệt",
-    "ultimatelyWaitingOn": "Cuối cùng đang chờ"
+    "linkedIssue_one": "issue liên kết",
+    "linkedIssue_other": "các issue liên kết",
+    "stalled_one": "Issue này bị chặn bởi {{blocker}}, nhưng chuỗi bị đình trệ trong review mà không có bước tiếp theo rõ ràng. Giải quyết review bị đình trệ bên dưới hoặc bỏ chặn.",
+    "stalled_other": "Issue này bị chặn bởi {{blocker}}, nhưng chuỗi bị đình trệ trong review mà không có bước tiếp theo rõ ràng. Giải quyết các review bị đình trệ bên dưới hoặc bỏ chặn.",
+    "waiting_one": "Issue này bị chặn bởi {{blocker}} cho đến khi hoàn thành. Comment vẫn đánh thức người nhận để hỏi hoặc phân loại.",
+    "waiting_other": "Issue này bị chặn bởi {{blocker}} cho đến khi chúng hoàn thành. Comment vẫn đánh thức người nhận để hỏi hoặc phân loại.",
+    "noBlockers": "Issue này bị chặn cho đến khi được chuyển lại về todo. Comment vẫn đánh thức người nhận để hỏi hoặc phân loại.",
+    "stalledInReview": "Đình trệ trong review",
+    "ultimatelyWaitingOn": "Đang chờ cuối cùng"
   },
   "draft": {
     "count_one": "{{count}} issue nháp",
