@@ -58,7 +58,7 @@ export function Agents() {
   const { selectedCompanyId } = useCompany();
   const { openNewAgent } = useDialog();
   const { setBreadcrumbs } = useBreadcrumbs();
-  const { t } = useTranslation(["navigation", "agents"]);
+  const { t } = useTranslation(["navigation", "agents", "common"]);
   const navigate = useNavigate();
   const location = useLocation();
   const { isMobile } = useSidebar();
@@ -151,7 +151,7 @@ export function Agents() {
               onClick={() => setFiltersOpen(!filtersOpen)}
             >
               <SlidersHorizontal className="h-3 w-3" />
-              Filters
+              {t("agents:agentDetail.filters.filters")}
               {showTerminated && <span className="ml-0.5 px-1 bg-foreground/10 rounded text-[10px]">1</span>}
             </button>
             {filtersOpen && (
@@ -166,7 +166,7 @@ export function Agents() {
                   )}>
                     {showTerminated && <span className="text-background text-[10px] leading-none">&#10003;</span>}
                   </span>
-                  Show terminated
+                  {t("agents:agentDetail.filters.showTerminated")}
                 </button>
               </div>
             )}
@@ -196,7 +196,7 @@ export function Agents() {
           )}
           <Button size="sm" variant="outline" onClick={openNewAgent}>
             <Plus className="h-3.5 w-3.5 mr-1.5" />
-            New Agent
+            {t("agents:newAgent")}
           </Button>
         </div>
       </div>
@@ -275,7 +275,7 @@ export function Agents() {
 
       {effectiveView === "list" && agents && agents.length > 0 && filtered.length === 0 && (
         <p className="text-sm text-muted-foreground text-center py-8">
-          No agents match the selected filter.
+          {t("agents:agentDetail.filters.noAgentsMatch")}
         </p>
       )}
 
@@ -290,13 +290,13 @@ export function Agents() {
 
       {effectiveView === "org" && orgTree && orgTree.length > 0 && filteredOrg.length === 0 && (
         <p className="text-sm text-muted-foreground text-center py-8">
-          No agents match the selected filter.
+          {t("agents:agentDetail.filters.noAgentsMatch")}
         </p>
       )}
 
       {effectiveView === "org" && orgTree && orgTree.length === 0 && (
         <p className="text-sm text-muted-foreground text-center py-8">
-          No organizational hierarchy defined.
+          {t("agents:agentDetail.filters.noOrgHierarchy")}
         </p>
       )}
     </div>

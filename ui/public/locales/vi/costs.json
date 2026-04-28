@@ -2,9 +2,28 @@
   "title": "Chi phí",
   "tabs": {
     "overview": "Tổng quan",
+    "budgets": "Ngân sách",
+    "providers": "Nhà cung cấp",
+    "billers": "Người lập hóa đơn",
+    "finance": "Tài chính",
     "events": "Sự kiện tài chính",
     "incidents": "Sự cố đang diễn ra"
   },
+  "presets": {
+    "mtd": "Tháng hiện tại",
+    "7d": "7 ngày qua",
+    "30d": "30 ngày qua",
+    "ytd": "Năm hiện tại",
+    "all": "Toàn bộ",
+    "custom": "Tùy chỉnh"
+  },
+  "inferenceLedger": "Sổ cái suy luận",
+  "inferenceLedgerDesc": "Chi phí suy luận theo phạm vi yêu cầu cho khoảng thời gian đã chọn.",
+  "financeLedger": "Sổ cái tài chính",
+  "financeEvents": "Sự kiện tài chính",
+  "budgetLabel": "Ngân sách",
+  "usage": "Sử dụng",
+  "net": "Thuần",
   "metrics": {
     "debits": "Khoản ghi nợ",
     "credits": "Khoản ghi có",
@@ -23,7 +42,8 @@
     "underBudget": "Trong ngân sách ({{percent}}%)",
     "warningThreshold": "Cảnh báo ({{percent}}%)",
     "overBudget": "Vượt ngân sách ({{percent}}%)",
-    "unlimited": "Ngân sách không giới hạn"
+    "unlimited": "Ngân sách không giới hạn",
+    "open": "Mở"
   },
   "incidents": {
     "active_one": "{{count}} sự cố đang hoạt động",
@@ -48,5 +68,159 @@
     "healthy": "Ngân sách bình thường",
     "warning": "Cảnh báo ngân sách",
     "paused": "Tạm dừng do ngân sách"
+  },
+  "selectCompany": "Chọn một công ty để xem chi phí.",
+  "pageTitle": "Chi phí",
+  "pageSubtitle": "Chi phí suy luận, phí nền tảng, tín dụng và cửa sổ hạn mức trực tiếp.",
+  "customDateTo": "đến",
+  "selectDateRange": "Chọn ngày bắt đầu và ngày kết thúc để tải dữ liệu.",
+  "noEvents_period": "Không có sự kiện chi phí nào trong khoảng thời gian này.",
+  "noBillableEvents": "Không có sự kiện tính phí nào trong khoảng thời gian này.",
+  "noBudgetPolicies": "Chưa có chính sách ngân sách nào. Hãy đặt ngân sách cho agent và dự án từ trang chi tiết của chúng, hoặc sử dụng điều khiển ngân sách hàng tháng của công ty hiện có.",
+  "allProviders": "Tất cả nhà cung cấp",
+  "allBillers": "Tất cả người lập hóa đơn",
+  "budgetDisplay": "Ngân sách {{amount}}",
+  "budgetUtilization": "{{percent}}% ngân sách hàng tháng đã sử dụng trong khoảng thời gian này.",
+  "topMetrics": {
+    "inferenceSubtitle": "{{tokens}} token cho các sự kiện theo phạm vi yêu cầu",
+    "incidentSubtitle": "{{agents}} agent đã tạm dừng · {{projects}} dự án đã tạm dừng",
+    "budgetOfTotal": "{{spent}} trên {{total}}",
+    "financeNetSubtitle": "{{debits}} ghi nợ · {{credits}} ghi có",
+    "estimatedInRange": "{{amount}} ước tính trong khoảng"
+  },
+  "byAgent": {
+    "title": "Theo agent",
+    "description": "Mức tiêu thụ của từng agent trong khoảng thời gian đã chọn.",
+    "noCosts": "Chưa có sự kiện chi phí nào.",
+    "inTokens": "vào {{tokens}}",
+    "outTokens": "ra {{tokens}}",
+    "runsSuffix": "lượt chạy",
+    "apiRuns": "api",
+    "subscriptionRuns": "đăng ký",
+    "apiRunCount_one": "{{count}} api",
+    "apiRunCount_other": "{{count}} api",
+    "subscriptionRunCount_one": "{{count}} đăng ký",
+    "subscriptionRunCount_other": "{{count}} đăng ký",
+    "tokenCount": "{{tokens}} tok"
+  },
+  "byProject": {
+    "title": "Theo dự án",
+    "description": "Chi phí chạy được quy cho các issue liên kết với dự án.",
+    "noCosts": "Chưa có chi phí chạy nào được quy cho dự án.",
+    "unattributed": "Chưa quy cho"
+  },
+  "budget": {
+    "controlPlane": "Mặt phẳng điều khiển ngân sách",
+    "controlPlaneDesc": "Giới hạn chi tiêu cứng cho agent và dự án. Hạn mức đăng ký của nhà cung cấp vẫn tách biệt và hiển thị dưới Nhà cung cấp.",
+    "activeIncidents": "Sự cố đang diễn ra",
+    "activeIncidentsSubtitle": "Các ngưỡng mềm hoặc cứng đang được mở",
+    "pendingApprovals": "Phê duyệt chờ xử lý",
+    "pendingApprovalsSubtitle": "Phê duyệt ghi đè ngân sách đang chờ hành động từ ban quản trị",
+    "pausedAgents": "Agent đã tạm dừng",
+    "pausedAgentsSubtitle": "Nhịp tim agent bị chặn bởi ngân sách",
+    "pausedProjects": "Dự án đã tạm dừng",
+    "pausedProjectsSubtitle": "Thực thi dự án bị chặn bởi ngân sách",
+    "incidentsTitle": "Sự cố đang diễn ra",
+    "incidentsDesc": "Giải quyết các điểm dừng cứng tại đây bằng cách tăng ngân sách hoặc giữ phạm vi ở trạng thái tạm dừng.",
+    "companyBudgets": "Ngân sách công ty",
+    "agentBudgets": "Ngân sách agent",
+    "projectBudgets": "Ngân sách dự án",
+    "companyBudgetsDesc": "Chính sách hàng tháng toàn công ty.",
+    "agentBudgetsDesc": "Chính sách chi tiêu hàng tháng định kỳ cho từng agent.",
+    "projectBudgetsDesc": "Chính sách chi tiêu trọn đời cho các dự án gắn liền với thực thi."
+  },
+  "finance": {
+    "byBillerTitle": "Theo người lập hóa đơn",
+    "byBillerDesc": "Các sự kiện tài chính cấp tài khoản được nhóm theo người đã tính phí hoặc ghi có.",
+    "noEvents": "Chưa có sự kiện tài chính nào."
+  },
+  "policy": {
+    "observed": "Thực tế",
+    "budget": "Ngân sách",
+    "noCapConfigured": "Chưa cấu hình giới hạn",
+    "disabled": "Đã tắt",
+    "softAlertAt": "Cảnh báo mềm ở {{percent}}%",
+    "softAlertPause": "Cảnh báo mềm ở {{percent}}% · tạm dừng {{reason}}",
+    "remaining": "Còn lại",
+    "unlimited": "Không giới hạn",
+    "paused": "Đã tạm dừng",
+    "warning": "Cảnh báo",
+    "hardStop": "Dừng cứng",
+    "healthy": "Bình thường",
+    "lifetimeBudget": "Ngân sách trọn đời",
+    "monthlyBudget": "Ngân sách tháng theo UTC",
+    "budgetUsd": "Ngân sách (USD)",
+    "invalidAmount": "Nhập một số tiền đô la hợp lệ không âm.",
+    "updateBudget": "Cập nhật ngân sách",
+    "setBudget": "Đặt ngân sách",
+    "saving": "Đang lưu...",
+    "pausedProject": "Việc thực thi dự án này đã bị tạm dừng cho đến khi ngân sách được tăng hoặc sự cố được bỏ qua.",
+    "pausedScope": "Phạm vi này đã bị tạm dừng. Nhịp tim mới sẽ không bắt đầu cho đến khi bạn giải quyết sự cố ngân sách."
+  },
+  "incident": {
+    "hardStop": "dừng cứng",
+    "spentAgainst": "Chi tiêu đã đạt {{observed}} so với giới hạn {{limit}}.",
+    "pausedProject": "Thực thi dự án đã bị tạm dừng. Công việc mới trong dự án này sẽ không bắt đầu cho đến khi bạn giải quyết sự cố ngân sách.",
+    "pausedScope": "Phạm vi này đã bị tạm dừng. Nhịp tim mới sẽ không bắt đầu cho đến khi bạn giải quyết sự cố ngân sách.",
+    "newBudgetUsd": "Ngân sách mới (USD)",
+    "raiseBudgetResume": "Tăng ngân sách & tiếp tục",
+    "applying": "Đang áp dụng...",
+    "mustExceedSpend": "Ngân sách mới phải vượt quá mức chi tiêu thực tế hiện tại.",
+    "keepPaused": "Giữ tạm dừng",
+    "stateResolved": "Đã giải quyết",
+    "stateDismissed": "Đã bỏ qua",
+    "stateEscalated": "Đã leo thang",
+    "statePendingApproval": "Chờ phê duyệt",
+    "stateOpen": "Đang mở"
+  },
+  "biller": {
+    "periodSpend": "Chi tiêu kỳ",
+    "allocationPct": "{{pct}}% phân bổ",
+    "billingTypes": "Loại thanh toán",
+    "upstreamProviders": "Nhà cung cấp thượng nguồn",
+    "thisWeek": "tuần này",
+    "in": "vào",
+    "out": "ra",
+    "providerCount_one": "{{count}} nhà cung cấp",
+    "providerCount_other": "{{count}} nhà cung cấp",
+    "modelCount_one": "{{count}} mô hình",
+    "modelCount_other": "{{count}} mô hình",
+    "meteredRuns_one": "{{count}} lượt chạy tính phí",
+    "meteredRuns_other": "{{count}} lượt chạy tính phí",
+    "subscriptionRuns_one": "{{count}} lượt chạy đăng ký",
+    "subscriptionRuns_other": "{{count}} lượt chạy đăng ký"
+  },
+  "accounting": {
+    "title": "Mô hình kế toán",
+    "subtitle": "Paperclip hiện tách biệt việc sử dụng suy luận cấp yêu cầu với các sự kiện tài chính cấp tài khoản. Điều này giữ cho báo cáo của nhà cung cấp chính xác khi người lập hóa đơn là OpenRouter, Cloudflare, Bedrock hoặc một trung gian khác.",
+    "inferenceLedger": {
+      "title": "Sổ cái suy luận",
+      "description": "Mức sử dụng theo phạm vi yêu cầu và các lượt chạy được tính phí từ cost_events.",
+      "point1": "token + đô la được tính phí",
+      "point2": "nhà cung cấp, người lập hóa đơn, mô hình",
+      "point3": "nhận biết đăng ký và vượt mức"
+    },
+    "financeLedger": {
+      "title": "Sổ cái tài chính",
+      "description": "Các khoản phí cấp tài khoản không phải là một cặp yêu cầu-phản hồi.",
+      "point1": "nạp tiền, hoàn tiền, phí",
+      "point2": "phí Bedrock được cấp phát hoặc đào tạo",
+      "point3": "hết hạn tín dụng và điều chỉnh"
+    },
+    "liveQuotas": {
+      "title": "Hạn mức trực tiếp",
+      "description": "Các cửa sổ của nhà cung cấp hoặc người lập hóa đơn có thể dừng lưu lượng theo thời gian thực.",
+      "point1": "cửa sổ hạn mức nhà cung cấp",
+      "point2": "hệ thống tín dụng của người lập hóa đơn",
+      "point3": "lỗi được hiển thị trực tiếp"
+    }
+  },
+  "financeSummary": {
+    "debitsSubtitle": "{{count}} sự kiện trong khoảng",
+    "debitsSubtitle_other": "{{count}} sự kiện trong khoảng",
+    "creditsSubtitle": "Hoàn tiền, bù trừ và hoàn tín dụng",
+    "netLabel": "Thuần",
+    "netSubtitle": "Ghi nợ trừ ghi có trong khoảng thời gian đã chọn",
+    "estimatedSubtitle": "Các khoản ghi nợ ước tính chưa được xác nhận bởi hóa đơn"
   }
 }

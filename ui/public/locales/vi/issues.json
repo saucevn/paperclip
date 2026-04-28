@@ -1,5 +1,5 @@
 {
-  "title": "Issues",
+  "title": "Vấn đề",
   "newIssue": "Tạo Issue mới",
   "noIssues": "Không tìm thấy issue nào.",
   "filters": {
@@ -56,7 +56,23 @@
     "createdAt": "Ngày tạo",
     "updatedAt": "Ngày cập nhật",
     "noLabels": "Không có nhãn",
-    "noProject": "Không có dự án"
+    "noProject": "Không có dự án",
+    "noProject_short": "Không có dự án",
+    "attachments": "Tệp đính kèm",
+    "uploadAttachment": "Tải lên tệp đính kèm",
+    "upload": "Tải lên",
+    "uploading": "Đang tải lên...",
+    "newSubIssue": "Issue con mới",
+    "createSubIssueLabel": "Issue con",
+    "properties": "Thuộc tính",
+    "noActivityYet": "Chưa có hoạt động nào.",
+    "costSummary": "Tóm tắt chi phí",
+    "noCostData": "Chưa có dữ liệu chi phí.",
+    "tokens": "Token {{count}}",
+    "deleteAttachment": "Xóa tệp đính kèm",
+    "deleteAttachmentConfirm": "Xóa?",
+    "yes": "Có",
+    "no": "Không"
   },
   "blockedNotice": {
     "single": "Công việc trên issue này bị chặn bởi issue được liên kết cho đến khi hoàn thành.",
@@ -87,5 +103,113 @@
   },
   "staleRun": "Lần chạy cũ",
   "noLivenessData": "Không có dữ liệu trạng thái",
-  "activeBlocker": "Đang bị chặn"
+  "activeBlocker": "Đang bị chặn",
+  "selectCompany": "Chọn một công ty để xem các issue.",
+  "tabs": {
+    "chat": "Chat",
+    "activity": "Hoạt động",
+    "relatedWork": "Công việc liên quan"
+  },
+  "actions": {
+    "copyAsMarkdown": "Sao chép dưới dạng markdown",
+    "archiveFromInbox": "Lưu trữ từ hộp thư đến",
+    "showProperties": "Hiện thuộc tính",
+    "moreIssueActions": "Thêm hành động issue",
+    "backToInbox": "Quay lại hộp thư đến",
+    "hideThisIssue": "Ẩn issue này",
+    "loadEarlierComments": "Tải bình luận cũ hơn",
+    "loadingEarlierComments": "Đang tải bình luận cũ hơn...",
+    "retryPreview": "Thử lại xem trước",
+    "copyIssueMarkdown": "Sao chép issue dưới dạng markdown"
+  },
+  "hiddenBanner": "Issue này đang bị ẩn",
+  "pausedSubtree": {
+    "pauseActive": "Tạm dừng cây con đang hoạt động.",
+    "executionHeld": "Việc thực thi gốc và con cháu bị giữ cho đến khi tiếp tục. Các bình luận của con người vẫn có thể đánh thức người nhận để phân loại.",
+    "descendantsHeld_one": "{{count}} con cháu bị giữ",
+    "descendantsHeld_other": "{{count}} con cháu bị giữ",
+    "started": "bắt đầu {{time}}",
+    "resumeSubtree": "Tiếp tục cây con",
+    "viewAffected": "Xem bị ảnh hưởng ({{count}})",
+    "cancelSubtree": "Hủy cây con...",
+    "pausedByAncestor": "Issue này bị tạm dừng bởi tổ tiên",
+    "resumeFromRoot": "Tiếp tục từ issue gốc để thực hiện công việc bị hoãn."
+  },
+  "subtreeControl": {
+    "modes": {
+      "pause": "Tạm dừng cây con",
+      "resume": "Tiếp tục cây con",
+      "cancel": "Hủy cây con",
+      "restore": "Khôi phục cây con"
+    },
+    "modeHelp": {
+      "pause": "Tạm dừng thực thi trong cây con issue này cho đến khi tiếp tục rõ ràng.",
+      "resume": "Giải phóng lệnh tạm dừng cây con đang hoạt động để công việc bị giữ có thể tiếp tục.",
+      "cancel": "Hủy các issue không ở trạng thái cuối trong cây con này và dừng công việc đang chạy/xếp hàng khi có thể.",
+      "restore": "Khôi phục các issue bị hủy bởi thao tác cây con này để công việc có thể tiếp tục."
+    },
+    "cancelWarning": "Hủy cây con là hành động phá hủy. Các issue không ở trạng thái cuối sẽ bị đánh dấu đã hủy, và công việc đang chạy hoặc xếp hàng sẽ bị ngắt khi có thể.",
+    "reasonLabel": "Lý do (tùy chọn)",
+    "reasonPlaceholder": "Giải thích lý do áp dụng kiểm soát cây con này...",
+    "wakeAgents": "Đánh thức các agent bị ảnh hưởng ({{count}})",
+    "wakeAgentsNone": "Không có agent nào được giao đủ điều kiện để đánh thức từ bản xem trước này.",
+    "wakeAgentsHelp": "Đánh thức các agent được giao sau khi thao tác này hoàn tất.",
+    "cancelConfirm": "Tôi hiểu điều này sẽ hủy {{count}} issue.",
+    "previewUnavailable": "Không có bản xem trước.",
+    "primaryButton": {
+      "pause": "Tạm dừng và dừng công việc",
+      "cancel": "Hủy {{count}} issue",
+      "restore": "Khôi phục {{count}} issue",
+      "resume": "Tiếp tục cây con"
+    },
+    "applying": "Đang áp dụng...",
+    "complete": "Hoàn thành"
+  },
+  "errors": {
+    "issueUpdateFailed": "Cập nhật issue thất bại",
+    "unableToSaveChanges": "Không thể lưu thay đổi issue",
+    "unableToSaveSubIssue": "Không thể lưu thay đổi issue con",
+    "commentFailed": "Bình luận thất bại",
+    "unableToPostComment": "Không thể đăng bình luận",
+    "cancelFailed": "Hủy thất bại",
+    "unableToCancel": "Không thể hủy bình luận đã xếp hàng",
+    "interruptFailed": "Ngắt thất bại",
+    "unableToInterrupt": "Không thể ngắt lần chạy đang hoạt động",
+    "archiveFailed": "Lưu trữ thất bại",
+    "unableToArchive": "Không thể lưu trữ issue này từ hộp thư đến",
+    "unableToApplySubtreeControl": "Không thể áp dụng kiểm soát cây con"
+  },
+  "toasts": {
+    "issueArchived": "Issue đã được lưu trữ từ hộp thư đến",
+    "copiedToClipboard": "Đã sao chép vào clipboard",
+    "interruptRequested": "Đã yêu cầu ngắt",
+    "interruptRequestedBody": "Lần chạy đang hoạt động đang dừng để các bình luận xếp hàng có thể tiếp tục.",
+    "queuedCommentCanceled": "Đã hủy bình luận xếp hàng",
+    "queuedCommentRestoredBody": "Tin nhắn xếp hàng đã được khôi phục vào trình soạn thảo.",
+    "approvalApproved": "Đã phê duyệt",
+    "approvalRejected": "Đã từ chối phê duyệt",
+    "approvalActionFailed": "Phê duyệt thất bại",
+    "rejectionActionFailed": "Từ chối thất bại",
+    "unableToUpdateApproval": "Không thể cập nhật phê duyệt",
+    "requestConfirmed": "Đã xác nhận yêu cầu",
+    "suggestedTasksAccepted": "Đã chấp nhận các nhiệm vụ đề xuất",
+    "acceptedDrafts": "Đã chấp nhận {{created}} bản nháp và bỏ qua {{skipped}}",
+    "acceptedDraft_one": "Đã chấp nhận {{created}} bản nháp và bỏ qua {{skipped}}",
+    "requestDeclined": "Đã từ chối yêu cầu",
+    "suggestionRejected": "Đã từ chối đề xuất",
+    "acceptFailed": "Chấp nhận thất bại",
+    "rejectFailed": "Từ chối thất bại",
+    "answersSubmitted": "Đã gửi câu trả lời",
+    "submitFailed": "Gửi thất bại",
+    "feedbackSaved": "Đã lưu phản hồi",
+    "feedbackSavedSharing": "Đã lưu phản hồi. Các lượt bình chọn trong tương lai sẽ được chia sẻ",
+    "feedbackSavedLocal": "Đã lưu phản hồi. Các lượt bình chọn trong tương lai sẽ ở lại cục bộ",
+    "feedbackSavedSharingEnabled": "Đã lưu phản hồi và bật chia sẻ",
+    "failedToSaveFeedback": "Không thể lưu phản hồi",
+    "subtreeResumed": "Cây con đã được tiếp tục",
+    "subtreePaused": "Cây con đã bị tạm dừng",
+    "subtreePausedBody": "Cây con đã bị tạm dừng. {{count}} lần chạy đã bị hủy."
+  },
+  "live": "Trực tiếp",
+  "routine": "Thói quen"
 }

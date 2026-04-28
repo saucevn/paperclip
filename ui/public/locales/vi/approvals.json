@@ -21,13 +21,87 @@
     "approve": "Phê duyệt",
     "reject": "Từ chối",
     "accept": "Chấp nhận",
-    "decline": "Từ chối"
+    "decline": "Từ chối",
+    "requestRevision": "Yêu cầu chỉnh sửa",
+    "markResubmitted": "Đánh dấu đã gửi lại",
+    "deleteDisapprovedAgent": "Xóa agent bị từ chối",
+    "seeFullRequest": "Xem toàn bộ yêu cầu",
+    "postComment": "Đăng bình luận",
+    "postingComment": "Đang đăng…",
+    "approving": "Đang phê duyệt...",
+    "rejecting": "Đang từ chối...",
+    "viewDetails": "Xem chi tiết"
   },
   "budgetOverride": "Vượt ngân sách",
   "joinRequest": "Yêu cầu tham gia",
   "approvalFor": "Phê duyệt cho {{name}}",
   "requestedBy": "Yêu cầu bởi {{name}}",
   "requestedAt": "Yêu cầu {{time}}",
+  "requestedByLabel": "Yêu cầu bởi",
+  "approvalRequestCreated": "Yêu cầu phê duyệt tạo lúc {{time}}",
   "companyAdminRequired": "Quản trị viên công ty phải phê duyệt yêu cầu tham gia của bạn",
-  "visitSettings": "Yêu cầu họ truy cập Cài đặt Công ty → Quyền truy cập"
+  "visitSettings": "Yêu cầu họ truy cập Cài đặt Công ty → Quyền truy cập",
+  "approvalNotFound": "Không tìm thấy phê duyệt.",
+  "banner": {
+    "approvalConfirmed": "Đã xác nhận phê duyệt",
+    "agentNotified": "Agent yêu cầu đã được thông báo để xem xét phê duyệt và các issue liên kết.",
+    "reviewLinkedIssues": "Xem các issue liên kết",
+    "reviewLinkedIssue": "Xem issue liên kết",
+    "openHiredAgent": "Mở agent đã được thuê",
+    "backToApprovals": "Quay lại danh sách phê duyệt"
+  },
+  "linkedIssues": {
+    "title": "Issues liên kết",
+    "footer": "Các issue liên kết vẫn mở cho đến khi agent yêu cầu theo dõi và đóng chúng."
+  },
+  "comments": {
+    "title": "Bình luận ({{count}})",
+    "placeholder": "Thêm bình luận...",
+    "board": "Board"
+  },
+  "decisionNote": "Ghi chú quyết định: {{note}}",
+  "decisionNoteLabel": "Ghi chú quyết định.",
+  "budgetStop": {
+    "resolveFrom": "Giải quyết điểm dừng ngân sách này từ phần kiểm soát ngân sách trên",
+    "costsPage": "/costs"
+  },
+  "deleteAgentConfirm": "Xóa agent bị từ chối này? Hành động này không thể hoàn tác.",
+  "typeLabels": {
+    "hireAgent": "Thuê Agent",
+    "approveCeoStrategy": "Chiến lược CEO",
+    "budgetOverrideRequired": "Vượt ngân sách",
+    "requestBoardApproval": "Phê duyệt Board"
+  },
+  "payload": {
+    "fields": {
+      "name": "Tên",
+      "role": "Vai trò",
+      "title": "Tiêu đề",
+      "icon": "Biểu tượng",
+      "capabilities": "Năng lực",
+      "adapter": "Adapter",
+      "skills": "Kỹ năng",
+      "scope": "Phạm vi",
+      "window": "Cửa sổ",
+      "metric": "Chỉ số",
+      "limit": "Giới hạn",
+      "observed": "Quan sát"
+    },
+    "sections": {
+      "summary": "Tóm tắt",
+      "recommendedAction": "Hành động đề xuất",
+      "onApproval": "Khi được phê duyệt",
+      "risks": "Rủi ro",
+      "proposedComment": "Bình luận đề xuất"
+    },
+    "budgetDisplay": "Giới hạn {{limit}} · Quan sát {{observed}}"
+  },
+  "errors": {
+    "approveFailed": "Phê duyệt thất bại",
+    "rejectFailed": "Từ chối thất bại",
+    "revisionFailed": "Yêu cầu chỉnh sửa thất bại",
+    "resubmitFailed": "Gửi lại thất bại",
+    "commentFailed": "Bình luận thất bại",
+    "deleteFailed": "Xóa thất bại"
+  }
 }
