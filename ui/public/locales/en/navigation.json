@@ -118,6 +118,8 @@
   "companyMenu": {
     "addCompany": "Add company",
     "noCompanies": "No companies",
-    "switchCompany": "Switch company"
+    "switchCompany": "Switch company",
+    "importCompany": "Import company",
+    "exportCompany": "Export company"
   }
 }

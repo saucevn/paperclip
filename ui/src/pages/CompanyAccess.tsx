@@ -39,8 +39,8 @@ const permissionLabels: Record<PermissionKey, string> = {
   "environments:manage": "Manage environments",
 };
 
-function formatGrantSummary(member: CompanyMember) {
-  if (member.grants.length === 0) return "No explicit grants";
+function formatGrantSummary(member: CompanyMember, noGrantsLabel: string) {
+  if (member.grants.length === 0) return noGrantsLabel;
   return member.grants.map((grant) => permissionLabels[grant.permissionKey]).join(", ");
 }
 
@@ -61,7 +61,8 @@ function getImplicitGrantKeys(role: CompanyMember["membershipRole"]) {
 export function CompanyAccess() {
   const { selectedCompany, selectedCompanyId } = useCompany();
   const { setBreadcrumbs } = useBreadcrumbs();
-  const { t } = useTranslation("navigation");
+  const { t: tNav } = useTranslation("navigation");
+  const { t } = useTranslation("settings");
   const { pushToast } = useToast();
   const queryClient = useQueryClient();
   const [editingMemberId, setEditingMemberId] = useState<string | null>(null);
@@ -74,10 +75,10 @@ export function CompanyAccess() {
   useEffect(() => {
     setBreadcrumbs([
       { label: selectedCompany?.name ?? "Company", href: "/dashboard" },
-      { label: t("breadcrumbs.settings"), href: "/company/settings" },
-      { label: t("breadcrumbs.access") },
+      { label: tNav("breadcrumbs.settings"), href: "/company/settings" },
+      { label: tNav("breadcrumbs.access") },
     ]);
-  }, [selectedCompany?.name, setBreadcrumbs]);
+  }, [selectedCompany?.name, setBreadcrumbs, tNav]);
 
   const membersQuery = useQuery({
     queryKey: queryKeys.access.companyMembers(selectedCompanyId ?? ""),
@@ -273,10 +274,10 @@ export function CompanyAccess() {
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <ShieldCheck className="h-5 w-5 text-muted-foreground" />
-          <h1 className="text-lg font-semibold">Company Access</h1>
+          <h1 className="text-lg font-semibold">{t("access.title")}</h1>
         </div>
         <p className="max-w-3xl text-sm text-muted-foreground">
-          Manage company user memberships, membership status, and explicit permission grants for {selectedCompany?.name}.
+          {t("access.description", { company: selectedCompany?.name })}
         </p>
       </div>
 
@@ -290,10 +291,10 @@ export function CompanyAccess() {
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <Users className="h-4 w-4 text-muted-foreground" />
-            <h2 className="text-base font-semibold">Humans</h2>
+            <h2 className="text-base font-semibold">{t("access.humans")}</h2>
           </div>
           <p className="max-w-3xl text-sm text-muted-foreground">
-            Manage human company memberships, status, and grants here.
+            {t("access.humansDesc")}
           </p>
         </div>
 
@@ -343,11 +344,11 @@ export function CompanyAccess() {
 
         <div className="overflow-hidden rounded-xl border border-border">
           <div className="grid grid-cols-[minmax(0,1.5fr)_120px_120px_minmax(0,1.2fr)_180px] gap-3 border-b border-border px-4 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-            <div>User account</div>
-            <div>Role</div>
-            <div>Status</div>
-            <div>Grants</div>
-            <div className="text-right">Action</div>
+            <div>{t("access.colUserAccount")}</div>
+            <div>{t("access.colRole")}</div>
+            <div>{t("access.colStatus")}</div>
+            <div>{t("access.colGrants")}</div>
+            <div className="text-right">{t("access.colAction")}</div>
           </div>
           {members.length === 0 ? (
             <div className="px-4 py-8 text-sm text-muted-foreground">No user memberships found for this company yet.</div>
@@ -374,11 +375,11 @@ export function CompanyAccess() {
                       {member.status.replace("_", " ")}
                     </Badge>
                   </div>
-                  <div className="min-w-0 text-sm text-muted-foreground">{formatGrantSummary(member)}</div>
+                  <div className="min-w-0 text-sm text-muted-foreground">{formatGrantSummary(member, t("access.noExplicitGrants"))}</div>
                   <div className="space-y-1 text-right">
                     <div className="flex justify-end gap-2">
                       <Button size="sm" variant="outline" onClick={() => setEditingMemberId(member.id)}>
-                        Edit
+                        {t("access.edit")}
                       </Button>
                       <Button
                         size="sm"
@@ -388,7 +389,7 @@ export function CompanyAccess() {
                         title={removalReason ?? undefined}
                       >
                         <Trash2 className="mr-1 h-3.5 w-3.5" />
-                        Remove
+                        {t("access.remove")}
                       </Button>
                     </div>
                     {removalReason ? (

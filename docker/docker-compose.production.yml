@@ -1,0 +1,78 @@
+# Production Docker Compose — dùng cho VPS self-host
+# Dùng Dockerfile.production (slim, không có AI CLI tools)
+#
+# Cách dùng:
+#   cp .env.production.example .env.production
+#   # Điền các biến bắt buộc trong .env.production
+#   docker compose -f docker/docker-compose.production.yml --env-file .env.production up -d
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-paperclip}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required}
+      POSTGRES_DB: ${DB_NAME:-paperclip}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-paperclip} -d ${DB_NAME:-paperclip}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    networks:
+      - internal
+
+  server:
+    build:
+      context: ..
+      dockerfile: Dockerfile.production
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${PAPERCLIP_PORT:-3100}:3100"
+    environment:
+      DATABASE_URL: postgres://${DB_USER:-paperclip}:${DB_PASSWORD}@db:5432/${DB_NAME:-paperclip}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?BETTER_AUTH_SECRET is required}
+      PAPERCLIP_PUBLIC_URL: ${PAPERCLIP_PUBLIC_URL:?PAPERCLIP_PUBLIC_URL is required}
+      BETTER_AUTH_TRUSTED_ORIGINS: ${PAPERCLIP_PUBLIC_URL}
+      PAPERCLIP_MIGRATION_AUTO_APPLY: "true"
+      PAPERCLIP_DEPLOYMENT_MODE: "authenticated"
+      PAPERCLIP_DEPLOYMENT_EXPOSURE: "private"
+      # LLM providers (ít nhất 1 cái để agent hoạt động)
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      # Secrets & Storage
+      PAPERCLIP_SECRETS_PROVIDER: ${PAPERCLIP_SECRETS_PROVIDER:-local_encrypted}
+      PAPERCLIP_SECRETS_MASTER_KEY_FILE: /paperclip/instances/default/secrets/master.key
+      PAPERCLIP_STORAGE_PROVIDER: ${PAPERCLIP_STORAGE_PROVIDER:-local_disk}
+      PAPERCLIP_STORAGE_LOCAL_DIR: /paperclip/instances/default/data/storage
+      # Agent JWT
+      PAPERCLIP_AGENT_JWT_SECRET: ${PAPERCLIP_AGENT_JWT_SECRET:-}
+      PAPERCLIP_AGENT_JWT_AUDIENCE: paperclip-api
+      PAPERCLIP_AGENT_JWT_ISSUER: paperclip
+      PAPERCLIP_AGENT_JWT_TTL_SECONDS: "172800"
+    volumes:
+      - paperclip-data:/paperclip
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3100/api/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 40s
+      retries: 3
+    networks:
+      - internal
+
+volumes:
+  pgdata:
+  paperclip-data:
+
+networks:
+  internal:
+    driver: bridge

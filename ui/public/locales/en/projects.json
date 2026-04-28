@@ -7,7 +7,10 @@
     "overview": "Overview",
     "issues": "Issues",
     "activity": "Activity",
-    "settings": "Settings"
+    "settings": "Settings",
+    "configuration": "Configuration",
+    "budget": "Budget",
+    "workspaces": "Workspaces"
   },
   "detail": {
     "description": "Description",
@@ -19,7 +22,10 @@
     "targetDate": "Target date",
     "noLead": "No lead",
     "noMembers": "No members",
-    "noTargetDate": "No target date"
+    "noTargetDate": "No target date",
+    "targetDateLabel": "Target Date",
+    "pausedByBudget": "Paused by budget hard stop",
+    "loadingWorkspaces": "Loading workspaces..."
   },
   "status": {
     "active": "Active",
@@ -28,5 +34,95 @@
     "cancelled": "Cancelled"
   },
   "noIssues": "No issues in this project.",
-  "archivedAt": "Archived {{date}}"
+  "archivedAt": "Archived {{date}}",
+  "workspace": {
+    "heading": "Project workspace",
+    "subheading": "Configure the concrete workspace Paperclip attaches to this project. These values drive per-workspace checkout behavior, default runtime services for child execution workspaces, and let you override setup or cleanup commands when one workspace needs special handling.",
+    "primaryBadge": "Primary workspace",
+    "secondaryBadge": "Secondary workspace",
+    "primaryDesc": "This is the project's primary codebase workspace.",
+    "makePrimary": "Make primary",
+    "backToWorkspaces": "Back to workspaces",
+    "saveChanges": "Save changes",
+    "reset": "Reset",
+    "noUnsavedChanges": "No unsaved changes.",
+    "fields": {
+      "workspaceName": "Workspace name",
+      "workspaceNamePlaceholder": "Workspace name",
+      "visibility": "Visibility",
+      "sourceType": "Source type",
+      "localPath": "Local path",
+      "localPathPlaceholder": "/absolute/path/to/workspace",
+      "repoUrl": "Repo URL",
+      "repoUrlPlaceholder": "https://github.com/org/repo",
+      "repoRef": "Repo ref",
+      "repoRefPlaceholder": "origin/main",
+      "defaultRef": "Default ref",
+      "defaultRefPlaceholder": "origin/main",
+      "sharedWorkspaceKey": "Shared workspace key",
+      "sharedWorkspaceKeyPlaceholder": "frontend",
+      "remoteProvider": "Remote provider",
+      "remoteProviderPlaceholder": "codespaces",
+      "remoteWorkspaceRef": "Remote workspace ref",
+      "remoteWorkspaceRefPlaceholder": "workspace-123",
+      "setupCommand": "Setup command",
+      "setupCommandHint": "Runs when this workspace needs custom bootstrap",
+      "setupCommandPlaceholder": "pnpm install && pnpm dev",
+      "cleanupCommand": "Cleanup command",
+      "cleanupCommandHint": "Runs before project-level execution workspace teardown",
+      "cleanupCommandPlaceholder": "pkill -f vite || true",
+      "advancedRuntimeJson": "Advanced runtime JSON",
+      "workspaceCommandsJson": "Workspace commands JSON",
+      "workspaceCommandsJsonHint": "Execution workspaces inherit this config unless they override it. Legacy `services` arrays still work, but `commands` supports both services and jobs."
+    },
+    "facts": {
+      "heading": "Workspace facts",
+      "currentState": "Current state",
+      "project": "Project",
+      "workspaceId": "Workspace ID",
+      "localPath": "Local path",
+      "repo": "Repo",
+      "defaultRef": "Default ref",
+      "updated": "Updated",
+      "none": "None"
+    },
+    "commands": {
+      "heading": "Workspace commands",
+      "subheading": "Services and jobs",
+      "description": "Long-running services stay supervised here, while one-shot jobs run on demand against this workspace. Execution workspaces inherit this config unless they override it.",
+      "advancedJsonDesc": "Paperclip derives Services and Jobs from this JSON. Prefer editing named commands first; use raw JSON for advanced lifecycle, port, readiness, or environment settings.",
+      "noServicesStarted": "No services have been started for this workspace yet.",
+      "noRuntimeConfig": "No workspace command config is defined for this workspace yet.",
+      "noJobsConfigured": "No one-shot jobs are configured for this workspace yet.",
+      "disabledHint": "Project workspaces need a working directory before local commands can run, and services also need runtime config."
+    },
+    "sourceTypes": {
+      "local_path": "Local git checkout",
+      "local_path_desc": "A local path Paperclip can use directly.",
+      "non_git_path": "Local non-git path",
+      "non_git_path_desc": "A local folder without git semantics.",
+      "git_repo": "Remote git repo",
+      "git_repo_desc": "A repo URL with optional refs and local checkout.",
+      "remote_managed": "Remote-managed workspace",
+      "remote_managed_desc": "A hosted workspace tracked by external reference."
+    },
+    "visibility": {
+      "default": "Default",
+      "advanced": "Advanced"
+    },
+    "loading": "Loading workspace…",
+    "notFound": "Workspace not found for this project.",
+    "errors": {
+      "failedToSave": "Failed to save workspace.",
+      "failedToUpdate": "Failed to update workspace.",
+      "failedToControl": "Failed to control workspace commands.",
+      "failedToLoad": "Failed to load workspace",
+      "remoteRequiresRef": "Remote-managed workspaces require a remote workspace ref or repo URL.",
+      "requiresPathOrUrl": "Workspace requires at least one local path or repo URL.",
+      "pathMustBeAbsolute": "Local workspace path must be absolute.",
+      "invalidRepoUrl": "Repo URL must be a valid URL.",
+      "invalidJson": "Invalid JSON.",
+      "jsonMustBeObject": "Workspace commands JSON must be a JSON object."
+    }
+  }
 }
